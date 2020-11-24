@@ -1,30 +1,21 @@
 import React from 'react';
-import { Viewer } from 'resium';
-const App = () => <Viewer />;
+import { Viewer, Entity, PointGraphics, EntityDescription } from 'resium';
+import { Cartesian3, createWorldTerrain } from 'cesium';
+
+const terrainProvider = createWorldTerrain();
+const position = Cartesian3.fromDegrees(-74.0707383, 40.7117244, 100);
+
+const App = () => (
+  <Viewer full terrainProvider={terrainProvider}>
+    <Entity position={position} name="Tokyo">
+      <PointGraphics pixelSize={10} />
+      <EntityDescription>
+        <h1>Hello, world.</h1>
+        <p>JSX is available here!</p>
+      </EntityDescription>
+    </Entity>
+  </Viewer>
+);
+
 export default App;
 
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Test and change <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
