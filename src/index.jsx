@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import About from './About/About.js';
-import AddNew from './Add-new/Add-new.js';
+import About from './About/About.jsx';
+import AddNew from './Add-new/Add-new.jsx';
 
 ReactDOM.render(
   <Router>
