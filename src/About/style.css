@@ -1,0 +1,168 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+Bootstrap 4 breakpointy: 576px, 768px, 992px, 1200px
+xs: (max-width: 575px)
+sm: (min-width: 576px) and (max-width: 767px)
+md: (min-width: 768px) and (max-width: 991px)
+lg: (min-width: 992px) and (max-width: 1199px)
+xl: (min-width: 1200px)
+
+Barvy coral 
+#98bfad - na zvyrazneni 
+#ffc4b2 - coral light na pozadi 
+#ffc4b241 - polopruhledne pozadi pod sekci 
+#694a52 - pozadi navigace + border vizitka fotka 
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  text-align: center;
+}
+
+.icon-bar {
+  text-align: center;
+  bottom: 0;
+}
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #98bfad;
+}
+
+h1 {
+  position: relative;
+  font-family: 'Sail', cursive;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+  font-size: 70px;
+  margin: 20px;
+}
+
+h2 {
+  position: relative;
+  font-family: 'Sail', cursive;
+  font-size: 38px;
+  text-align: center;
+  color: #98bfad;
+}
+
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+.header {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  /*display: flex;
+  align-items: center;
+  justify-content: ;
+  flex-direction: column;*/
+  background-image: url(../images/mountain1.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  text-align: center;
+  max-width: 60rem;
+  margin: 0 auto 0 auto;
+  padding: 20px;
+}
+
+.team {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 60rem;
+  padding: 20px;
+}
+
+.member {
+  text-align: center;
+  max-width: 350px;
+  padding: 30px;
+}
+
+.pictureID {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: center;
+  padding: 10px;
+}
+
+.icon {
+  margin: 10px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  background-color: #98bfad;
+}
+
+.footer {
+  text-align: center;
+  color: darkgrey;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .member {
+    text-align: center;
+    flex-basis: 33.333%;
+    max-width: 350px;
+    padding: 30px;
+  }
+
+  .icon-bar {
+    position: fixed;
+    top: 20%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+  }
+
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: right;
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
+}

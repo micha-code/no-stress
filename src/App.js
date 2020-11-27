@@ -3,7 +3,7 @@ import { Viewer, Entity } from 'resium';
 
 function App() {
   const viewer = useRef(null);
-  return <Viewer ref={viewer} />;
+  return <Viewer ref={viewer} Scene backgroundColor={Color.CORNFLOWERBLUE}  />;
 }
 export default App;
 
