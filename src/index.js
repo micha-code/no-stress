@@ -3,11 +3,40 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import About from './About/About.js';
+import AddNew from './Add-new/Add-new.js';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/add-new">Add new</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <Switch>
+        <Route exact path="/"></Route>
+        <Route path="/add-new">
+          <AddNew />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </main>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root'),
 );
 
