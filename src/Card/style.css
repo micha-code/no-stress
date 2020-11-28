@@ -2,6 +2,11 @@
   flex: 1 1 50%;
 }
 
+p.card__text {
+  font-size: 14px;
+  padding: 10px;
+}
+
 .card__mustDo {
   background-color: #694a52;
   border-radius: 20px;
@@ -30,15 +35,15 @@
   margin: 1rem auto;
 }
 
-.card__category {
+.card__body {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .category__pin {
   width: 2rem;
   float: right;
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .card__text,

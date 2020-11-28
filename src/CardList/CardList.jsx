@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './style.css';
 import { data } from './data.js';
-import { Card } from './Card/Card.jsx';
+import Card from '../Card/Card';
 
 
 const CardList = () => {
   return (
     <>
       <div className="container">
-        {data.map((card) => (
+        {data.map((props) => (
           <Card
-            name={card.name}
-            text={card.text}
-            category={card.category}
-            link={card.link}
-            map={card.map}
+            name={props.name}
+            text={props.text}
+            category={props.category}
+            link={props.link}
+            map={props.map}
           />
         ))}
       </div>
@@ -23,4 +23,4 @@ const CardList = () => {
   );
 };
 
-render(<CardList />, document.querySelector('#app'));
+export default CardList;

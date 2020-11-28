@@ -4,9 +4,7 @@
   margin: 1rem auto;
 }
 
-.card {
-  margin: 2rem;
-}
+
 .card__category {
   display: flex;
   justify-content: center;
