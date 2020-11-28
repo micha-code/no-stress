@@ -7,24 +7,26 @@ const FilterCategories = (category) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="container">
-        <select>
-          <option className="info-category" value="accomodation">
-            Accomodation
-          </option>
-          <option className="info-category" value="restaurant">
-            Food and Drinks
-          </option>
-          <option className="info-category" value="metime">
-            Me time
-          </option>
-          <option className="info-category" value="mustdo">
-            Must do
-          </option>
-        </select>
-      </div>
-    </form>
+    <div className="container">
+      <form onSubmit={handleSubmit}>
+        <div>
+          <select>
+            <option className="info-category" value="accomodation">
+              Accomodation
+            </option>
+            <option className="info-category" value="restaurant">
+              Food and Drinks
+            </option>
+            <option className="info-category" value="metime">
+              Me time
+            </option>
+            <option className="info-category" value="mustdo">
+              Must do
+            </option>
+          </select>
+        </div>
+      </form>
+    </div>
   );
 };
 

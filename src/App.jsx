@@ -31,7 +31,7 @@ const App = () => {
       <header className="main">
         <h1 className="mainTitle">No stress Travels!</h1>
         <h2 className="secondTitle">Living life as an adventure</h2>
-        <img className="mountainImg" src="images/mountain1.jpg" />
+        <img className="mountainImg" src="images/mountainCropped.jpg" />
         <h3 className="thirdTitle">Where is the next adventure taking you?</h3>
       </header>
       <main>
