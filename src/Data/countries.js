@@ -159,7 +159,7 @@ export const countries = [
     country: 'CI',
     latitude: 7.539989,
     longitude: -5.54708,
-    name: "Côte d'Ivoire",
+    name: 'Côte dIvoire',
   },
   {
     country: 'CK',
