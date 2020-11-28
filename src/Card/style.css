@@ -1,14 +1,35 @@
-.container {
-  max-width: 30rem;
-  margin: 1rem auto;
-  background-color: grey;
-  opacity: 0.6;
-  border-radius: 20px;
+.card {
+  flex: 1 1 50%;
 }
 
-.card {
-  margin: 2rem;
+.card__mustDo {
+  background-color: #694a52;
+  border-radius: 20px;
+  width: 30rem;
+  margin: 1rem auto;
 }
+
+.card__meTime {
+  background-color: #d83957;
+  border-radius: 20px;
+  width: 30rem;
+  margin: 1rem auto;
+}
+
+.card__accomodation {
+  background-color: #98bfad;
+  border-radius: 20px;
+  width: 30rem;
+  margin: 1rem auto;
+}
+
+.card__restaurant {
+  background-color: #ff907c;
+  border-radius: 20px;
+  width: 30rem;
+  margin: 1rem auto;
+}
+
 .card__category {
   display: flex;
   justify-content: center;

@@ -4,20 +4,23 @@ import './style.css';
 import { data } from './data.js';
 import { Card } from './Card/Card.jsx';
 
+
 const CardList = () => {
   return (
     <>
       <div className="container">
-        {data.map((props) => (
+        {data.map((card) => (
           <Card
-            name={props.name}
-            text={props.text}
-            category={props.category}
-            link={props.link}
-            map={props.map}
+            name={card.name}
+            text={card.text}
+            category={card.category}
+            link={card.link}
+            map={card.map}
           />
         ))}
       </div>
     </>
   );
 };
+
+render(<CardList />, document.querySelector('#app'));
