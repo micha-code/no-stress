@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const About = () => {
   return (
@@ -49,13 +50,13 @@ const About = () => {
         travelers on one platform, where they are able to share their
         experiences, write reviews, and encourage other girls and women to have
         the courage to go beyond their everyday life. This project was created
-        as a part of Czechitas Web Digital Academy.
+        as a part of Czechitas Web Digital Academy.{' '}
         <a
           style={{ color: '#ff1493' }}
           href="https://www.czechitas.cz/en/"
           className="czechitas"
         >
-          Czechitas
+          Czechitas{' '}
         </a>
         is a non-profit organization consisted of women and men who all share
         one common goal – to increase diversity in the IT world and to fight for
