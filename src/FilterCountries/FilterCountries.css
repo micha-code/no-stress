@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -25,8 +27,6 @@ html {
   border-radius: 9px;
   padding: 2rem;
 }
-
-
 
 /*!
  * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
