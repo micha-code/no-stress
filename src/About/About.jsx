@@ -2,10 +2,206 @@ import React from 'react';
 
 const About = () => {
   return (
-    <h1>
-      This will be the page about us
-    </h1>
-  )
-}
+    <>
+      <div className="icon-bar">
+        <a
+          href="https://www.facebook.com/nostresstravelguide"
+          className="facebook"
+        >
+          <img
+            src="images/fb.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="Facebook"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/nostresstravelguide/"
+          className="instagram"
+        >
+          <img
+            src="images/instagram.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="Instagram"
+          />
+        </a>
+        <a href="nostresstravelguide@gmail.com " className="email">
+          <img
+            src="images/email.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="email"
+          />
+        </a>
+      </div>
 
-export default About
+      <h1>About</h1>
+      <p className="intro">
+        Are you an adventurous soul, who loves traveling from the deep bottom of
+        your heart? In that case, this website is perfect for you! We are a
+        community of adventurous women, who enjoy sharing their tips and tricks
+        with others. More and more women travel solo, but they might often
+        encounter negative reactions from others. We want to connect women
+        travelers on one platform, where they are able to share their
+        experiences, write reviews, and encourage other girls and women to have
+        the courage to go beyond their everyday life. This project was created
+        as a part of Czechitas Web Digital Academy.
+        <a
+          style={{ color: '#ff1493' }}
+          href="https://www.czechitas.cz/en/"
+          className="czechitas"
+        >
+          Czechitas
+        </a>
+        is a non-profit organization consisted of women and men who all share
+        one common goal – to increase diversity in the IT world and to fight for
+        a higher level of digital proficiency among women, girls and children as
+        well
+      </p>
+
+      <div className="team">
+        <div className="member">
+          <h3 className="id">Ivona Zelinková</h3>
+          <img
+            className="pictureID"
+            src="images/ivona.jpg"
+            alt="traveller Ivona"
+          />
+          <p className="text">
+            I love being outdoors and moving in all possible means - riding my
+            bicycle, walking in the woods, swimming in the river in winter.
+            Sleeping in the desert in my tent or just under a rock overhang
+            makes me wake up smiling in the morning. I am a free spirit with
+            freedom being my most appreciated value. Currently I make my living
+            by helping to implement a human resources rmanagement software in a
+            multinational. In the evenings I study React and JavaScript within
+            Czechitas Digital Academy.
+          </p>
+          <a href="https://www.linkedin.com/in/ivonaze">
+            <img
+              src="images/linkedin.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Linkedin"
+            />
+          </a>
+          <a href="https://github.com/ivze">
+            <img
+              src="images/github.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+          <a href="https://github.com/ivze">
+            <img
+              src="images/web.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+        </div>
+        <div className="member">
+          <h3 className="id">Michaela Davidová</h3>
+          <img
+            className="pictureID"
+            src="images/Misa.jpg"
+            alt="Cestovatelka Misa"
+          />
+          <p className="text">
+            I am addicted to the feeling of discovering and learning something
+            new. My main driving force is curiosity. Having visited more than 65
+            countries and lived in five of them, I am still craving new
+            experiences. I am lucky to use my skills and passion in my
+            professional life. I have marketing and business development
+            experience from the multicultural environment in Europe and Asia,
+            and I believe the storytelling and visual image make your products
+            go viral. In the meantime, you will probably find me on the beach or
+            in the mountains.
+          </p>
+          <a href="https://www.linkedin.com/in/michaela-davidova">
+            <img
+              src="images/linkedin.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Linkedin"
+            />
+          </a>
+          <a href="https://github.com/micha-code/">
+            <img
+              src="images/github.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+          <a href="https://github.com/micha-code/">
+            <img
+              src="images/web.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+        </div>
+        <div className="member">
+          <h3 className="id">Pavlína Müllerová</h3>
+          <img
+            className="pictureID"
+            src="images/Misa.jpg"
+            alt="Cestovatelka Misa"
+          />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+            ipsam perspiciatis harum, tenetur perferendis quod minima, maiores
+            neque aut odio dicta cum nesciunt tempora ipsum nemo explicabo?
+            Laborum deserunt laboriosam corrupti, ea dolor optio nesciunt magni
+            ipsam accusamus debitis quibusdam delectus consectetur odio,
+            eligendi fugit non vel, amet provident modi!
+          </p>
+          <a href="https://www.linkedin.com/in/michaela-davidova">
+            <img
+              src="images/linkedin.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Linkedin"
+            />
+          </a>
+          <a href="https://github.com/micha-code/">
+            <img
+              src="images/github.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+          <a href="https://github.com/micha-code/">
+            <img
+              src="images/web.svg"
+              width="25"
+              height="25"
+              className="icon"
+              alt="Github"
+            />
+          </a>
+        </div>
+      </div>
+      <footer className="footer">Czechitas project 2020</footer>
+    </>
+  );
+};
+
+export default About;
