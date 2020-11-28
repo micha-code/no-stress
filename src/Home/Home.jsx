@@ -7,7 +7,7 @@ import {
   BillboardCollection,
   Billboard,
 } from 'resium';
-import { Color, Ion } from 'cesium';
+import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 
 function Home() {
@@ -23,7 +23,6 @@ function Home() {
       ref={viewer}
       Scene
       backgroundColor={Color.CORNFLOWERBLUE}
-      full
       terrainProvider={terrainProvider}
     >
       <Entity position={position} name="Tokyo">
@@ -32,6 +31,8 @@ function Home() {
             position={position}
             image="/images/pin-restaurant.svg"
             scale={1.0}
+            horizontalOrigin={HorizontalOrigin.CENTER}
+            verticalOrigin={VerticalOrigin.BOTTOM}
           ></Billboard>
         </BillboardCollection>
       </Entity>
@@ -67,6 +68,11 @@ export default Home;
             <h1>Hello, world.</h1>
             <p>JSX is available here!</p>
          </EntityDescription>
-         </Entity> */
+         </Entity> 
+
+rotation={0.0}
+sizeInMeters={false}       
+         
+         */
 
 // export default App;
