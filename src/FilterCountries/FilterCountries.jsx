@@ -31,6 +31,10 @@ const FilterCountries = ({ country, setCountry }) => {
     setFilteredCountries(userFilteredCountries);
   }, [userFilter]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="container">
       <div className="country-info">
@@ -38,7 +42,7 @@ const FilterCountries = ({ country, setCountry }) => {
 2. kliknu do divu s jednou zemí, schová se div s jednou zemí, objeví se input text
 3. uživatel píše do input textu, na změnu textu (on change) se mění seznam států (div options)
 4. uživatel klikne na stát, ten se objeví v divu země, schová se zbytek */}
-        <form className="country-data">
+        <form onSubmit={handleSubmit} className="country-data">
           <div>
             {!editMode && (
               <div

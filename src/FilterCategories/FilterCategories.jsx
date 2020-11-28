@@ -2,12 +2,22 @@ import React from 'react';
 import './FilterCategories.css';
 
 const FilterCategories = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       <div className="container">
-        <h2 className="info-category">Filter Categories</h2>
+        <select>
+          <option className="info-category" value="accomodation">Accomodation</option>
+          <option className="info-category" value="restaurant">Food and Drinks </option>
+          <option className="info-category" value="metime"> Me time </option>
+          <option className="info-category" value="mustdo">Must do </option>
+        </select>
       </div>
-    </>
+    </form>
   );
 };
 
