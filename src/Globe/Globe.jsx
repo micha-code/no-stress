@@ -57,7 +57,9 @@ const Globe = ({ country }) => {
       );
     }
     return function cleanup() {
-      viewer.current.cesiumElement._element.removeEventListener('wheel');
+      if (viewer.current && viewer.current.cesiumElement) {
+        viewer.current.cesiumElement._element.removeEventListener('wheel');
+      }
     };
   }, [viewer]);
 
