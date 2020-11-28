@@ -89,12 +89,13 @@ body {
   }
   .secondTitle {
     font-size: 40px;
-    line-height: 49px;
+    line-height: 20px;
+    padding: 20px;
   }
   .thirdTitle {
-    font-size: 36px;
-    line-height: 24px;
-    padding-top: 124px;
+    font-size: 24px;
+    line-height: 14px;
+    padding-top: 20px;
   }
 }
 
