@@ -8,23 +8,27 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .menu {
   display: flex;
   list-style: none;
   margin: 1px;
-  padding: 0;
+  margin-left: 40px;
+  padding: 10px 0;
+  font-size: 14px;
 }
 
-a {
+.menu a {
   height: 100%;
   display: flex;
   align-items: center;
   padding: 5px 15px;
+  border-radius: 10px;
+  color: black;
 }
 
-a:hover {
-  color: #ffcccc, 100%;
+.menu a:hover {
+  background-color: #ffcccc;
 }
