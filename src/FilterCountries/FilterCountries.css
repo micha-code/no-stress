@@ -14,6 +14,8 @@ html {
   font-size: 20px;
   line-height: 24px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #000000;
 }
@@ -23,6 +25,8 @@ html {
   border-radius: 9px;
   padding: 2rem;
 }
+
+
 
 /*!
  * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
