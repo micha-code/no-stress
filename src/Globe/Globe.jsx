@@ -30,9 +30,10 @@ const Globe = ({ country }) => {
       });
       if (currentCountry) {
         const position = Cartesian3.fromDegrees(
-          currentCountry.latitude,
           currentCountry.longitude,
-          100,
+          currentCountry.latitude,
+
+          600000,
         );
 
         console.log(viewer.current);
