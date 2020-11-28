@@ -1,14 +1,10 @@
 .container {
-  max-width: 30rem;
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem auto;
-  background-color: grey;
-  opacity: 0.6;
-  border-radius: 20px;
 }
 
-.card {
-  margin: 2rem;
-}
+
 .card__category {
   display: flex;
   justify-content: center;

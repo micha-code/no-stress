@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { render } from 'react-dom';
 import './style.css';
 import { data } from './data.js';
-import { Card } from './Card/Card.jsx';
+import Card from '../Card/Card';
+
 
 const CardList = () => {
   return (
@@ -21,3 +22,5 @@ const CardList = () => {
     </>
   );
 };
+
+export default CardList;
