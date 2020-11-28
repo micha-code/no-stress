@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FilterCountries.css';
-import { countries } from './countries.js';
+import { countries } from '../Data/countries.js';
 
 const FilterCountries = ({ country, setCountry }) => {
   const [editMode, setEditMode] = useState(false);

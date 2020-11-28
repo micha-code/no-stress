@@ -13,7 +13,7 @@ function Home() {
         <FilterCountries setCountry={setCountry} country={country} />{' '}
         <FilterCategories />
       </div>
-      <Globe />
+      <Globe country={country} />
     </>
   );
 }

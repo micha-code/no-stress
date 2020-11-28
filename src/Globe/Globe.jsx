@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Viewer,
   Entity,
@@ -9,8 +9,9 @@ import {
 } from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
+import { countries } from '../Data/countries.js';
 
-const Globe = () => {
+const Globe = ({ country }) => {
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
@@ -21,6 +22,15 @@ const Globe = () => {
   const position3 = Cartesian3.fromDegrees(-73.711971, 5.669982, 100);
 
   const viewer = useRef(null);
+
+  useEffect(() => {
+    if (viewer.current) {
+      const position = Cartesian3.fromDegrees(-74.0707383, 40.7117244, 100);
+      console.log(viewer.current);
+      viewer.current.cesiumElement.camera.flyTo({ destination: position });
+    }
+  }, [country, viewer]);
+
   return (
     <Viewer
       ref={viewer}
