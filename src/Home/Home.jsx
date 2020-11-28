@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Viewer, Entity } from 'resium';
-import { Ion } from "cesium";
-
+import { Color, Ion } from 'cesium';
 
 function Home() {
-  Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ";
+  Ion.defaultAccessToken =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
   const viewer = useRef(null);
-  return <Viewer ref={viewer} Scene backgroundColor={Color.CORNFLOWERBLUE}  />;
+  return <Viewer ref={viewer} Scene backgroundColor={Color.CORNFLOWERBLUE} />;
 }
 export default Home;
 
