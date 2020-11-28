@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FilterCountries.css';
+import './flags.css';
 import { countries } from '../Data/countries.js';
 
 const FilterCountries = ({ country, setCountry }) => {
@@ -16,6 +17,7 @@ const FilterCountries = ({ country, setCountry }) => {
       .slice(0, 10)
       .map((item) => (
         <div
+          className="country-choice"
           key={item.name}
           value={item.country}
           onClick={() => {
@@ -55,6 +57,7 @@ const FilterCountries = ({ country, setCountry }) => {
 
             {editMode && (
               <input
+                className="input-countries"
                 type="text"
                 placeholder="Enter country"
                 onChange={(e) => {
