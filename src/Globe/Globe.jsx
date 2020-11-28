@@ -32,7 +32,6 @@ const Globe = ({ country }) => {
         const position = Cartesian3.fromDegrees(
           currentCountry.longitude,
           currentCountry.latitude,
-
           600000,
         );
 
