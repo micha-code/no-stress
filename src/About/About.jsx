@@ -115,7 +115,7 @@ const About = () => {
           <img
             className="pictureID"
             src="images/Misa.jpg"
-            alt="Cestovatelka Misa"
+            alt="traveller Misa"
           />
           <p className="text">
             I am addicted to the feeling of discovering and learning something
@@ -161,7 +161,7 @@ const About = () => {
           <img
             className="pictureID"
             src="images/Misa.jpg"
-            alt="Cestovatelka Misa"
+            alt="traveller Pavlina"
           />
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
