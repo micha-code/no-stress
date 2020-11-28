@@ -26,7 +26,9 @@ const FilterCountries = ({ country, setCountry }) => {
           }}
         >
           {item.name}
-          <div className={`flag flag-${item.country.toLowerCase()}`}> </div>
+          <div className="flag-wrap">
+            <div className={`flag flag-${item.country.toLowerCase()}`}> </div>
+          </div>
         </div>
       ));
 
@@ -40,12 +42,8 @@ const FilterCountries = ({ country, setCountry }) => {
   return (
     <div className="container">
       <div className="country-info">
-        {/* 1. nejdřív jde vidět div s jednou zemí, div options, input text uživ. filtr jsou schované
-2. kliknu do divu s jednou zemí, schová se div s jednou zemí, objeví se input text
-3. uživatel píše do input textu, na změnu textu (on change) se mění seznam států (div options)
-4. uživatel klikne na stát, ten se objeví v divu země, schová se zbytek */}
         <form onSubmit={handleSubmit} className="country-data">
-          <div>
+          <div className="country-holder">
             {!editMode && (
               <div
                 className="country-selected"
