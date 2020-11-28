@@ -10,8 +10,13 @@ import AddNew from './Add-new/Add-new.jsx';
 const App = () => {
   return (
     <Router>
-      <nav>
-        <ul>
+      <nav className="navbar">
+        <img
+          className="LogoImg"
+          src="images/logo-menu.svg"
+          alt="Logo no-stress"
+        />
+        <ul className="menu">
           <li>
             <Link to="/">Home</Link>
           </li>

@@ -1,0 +1,30 @@
+/* navbar styles */
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 1px;
+  padding: 0;
+}
+
+a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+a:hover {
+  color: #ffcccc, 100%;
+}
