@@ -25,9 +25,19 @@ const Globe = ({ country }) => {
 
   useEffect(() => {
     if (viewer.current) {
-      const position = Cartesian3.fromDegrees(-74.0707383, 40.7117244, 100);
-      console.log(viewer.current);
-      viewer.current.cesiumElement.camera.flyTo({ destination: position });
+      const currentCountry = countries.find((item) => {
+        return country === item.country;
+      });
+      if (currentCountry) {
+        const position = Cartesian3.fromDegrees(
+          currentCountry.latitude,
+          currentCountry.longitude,
+          100,
+        );
+
+        console.log(viewer.current);
+        viewer.current.cesiumElement.camera.flyTo({ destination: position });
+      }
     }
   }, [country, viewer]);
 

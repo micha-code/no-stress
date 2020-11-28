@@ -20,7 +20,7 @@ const FilterCountries = ({ country, setCountry }) => {
           value={item.country}
           onClick={() => {
             setEditMode(false);
-            setCountry(item.name);
+            setCountry(item.country);
           }}
         >
           {item.name}
