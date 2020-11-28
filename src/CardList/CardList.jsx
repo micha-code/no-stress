@@ -4,7 +4,6 @@ import './style.css';
 import { data } from './data.js';
 import Card from '../Card/Card';
 
-
 const CardList = () => {
   return (
     <>
