@@ -1,0 +1,50 @@
+.container {
+  max-width: 30rem;
+  margin: 1rem auto;
+  background-color: grey;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+
+.card {
+  margin: 2rem;
+}
+.card__category {
+  display: flex;
+  justify-content: center;
+}
+
+.category__pin {
+  width: 2rem;
+  float: right;
+  margin-left: 10px;
+}
+
+.card__text,
+.card__name {
+  color: white;
+  padding: 1rem;
+  margin: 0;
+  line-height: 150%;
+  text-align: center;
+}
+
+.card__name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.category__web,
+.category__map {
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  margin: 10px;
+}
+
+.card__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
