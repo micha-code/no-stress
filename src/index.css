@@ -32,3 +32,69 @@
 .menu a:hover {
   background-color: #ffcccc;
 }
+
+/*
+.main {
+  padding: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  min-height: 100vh;
+  margin-bottom: 50px;
+}
+*/
+
+.mountainImg {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mainTitle {
+  font-size: 40px;
+  font-family: Sail;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.secondTitle {
+  font-size: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: black;
+}
+
+.thirdTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainTitle {
+    font-size: 96px;
+    line-height: 111px;
+  }
+  .secondTitle {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .thirdTitle {
+    font-size: 36px;
+    line-height: 24px;
+    padding-top: 124px;
+  }
+}
+
+/*
+position: absolute;
+left: 30%;
+top: 25%;
+*/
