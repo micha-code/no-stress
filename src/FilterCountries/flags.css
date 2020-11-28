@@ -2,11 +2,18 @@
  * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
  */
 
-.flag {
+.flag-wrap {
+  width: 64px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
   display: inline-block;
-  width: 16px;
-  height: 11px;
-  background: url('flags.png') no-repeat;
+} 
+.flag {
+
+  width: 64px;
+  height: 64px;
+  background: url('flags64.png') no-repeat;
 }
 .flag.flag-pt {
   background-position: 0 -704px;

@@ -24,12 +24,11 @@ html {
   border-radius: 9px;
 }
 
-.country-info {
+.country-holder {
   padding: 2rem;
 }
 
 .country-choice {
-  padding: 10px;
   border: 1px solid rgba(152, 191, 173, 0.35);
   box-sizing: border-box;
   border-radius: 9px;
@@ -40,6 +39,7 @@ html {
 }
 
 .country-list {
+  width: 100%;
   position: absolute;
   z-index: 1;
   background: #ffffff;
