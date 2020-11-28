@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './FilterCountries.css';
 import { countries } from './countries.js';
 
-const FilterCountries = () => {
-  const [country, setCountry] = useState('CZ');
+const FilterCountries = ({ country, setCountry }) => {
   const [editMode, setEditMode] = useState(false);
   const [filteredCountries, setFilteredCountries] = useState(null);
   const [userFilter, setUserFilter] = useState('');

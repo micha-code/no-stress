@@ -5,10 +5,12 @@ import FilterCountries from '../FilterCountries/FilterCountries.jsx';
 import FilterCategories from '../FilterCategories/FilterCategories.jsx';
 
 function Home() {
+  const [country, setCountry] = useState('CZ');
+
   return (
     <>
       <div className="filters">
-        <FilterCountries />
+        <FilterCountries setCountry={setCountry} country={country} />{' '}
         <FilterCategories />
       </div>
       <Globe />
