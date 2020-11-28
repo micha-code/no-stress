@@ -25,6 +25,7 @@ const Globe = ({ country }) => {
 
   useEffect(() => {
     if (viewer.current) {
+      viewer.current.cesiumElement.scene.screenSpaceCameraController.enableZoom = false;
       const currentCountry = countries.find((item) => {
         return country === item.country;
       });
@@ -40,6 +41,25 @@ const Globe = ({ country }) => {
       }
     }
   }, [country, viewer]);
+
+  useEffect(() => {
+    const pageStep = 25;
+    if (viewer.current && viewer.current.cesiumElement) {
+      viewer.current.cesiumElement._element.addEventListener(
+        'wheel',
+        function (event) {
+          if (event.deltaY < 0) {
+            window.scroll(0, window.pageYOffset - pageStep);
+          } else {
+            window.scroll(0, window.pageYOffset + pageStep);
+          }
+        },
+      );
+    }
+    return function cleanup() {
+      viewer.current.cesiumElement._element.removeEventListener('wheel');
+    };
+  }, [viewer]);
 
   return (
     <Viewer
