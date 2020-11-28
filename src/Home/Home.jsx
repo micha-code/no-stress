@@ -9,6 +9,7 @@ import {
 } from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
+import './Home.css';
 
 function Home() {
   Ion.defaultAccessToken =

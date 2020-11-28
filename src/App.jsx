@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
-import './index.css';
+import './App.css';
 import Home from './Home/Home';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
