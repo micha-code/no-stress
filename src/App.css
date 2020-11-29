@@ -12,29 +12,6 @@ code {
     monospace;
 }
 
-/* hamburger menu styles */
-
-.hamburger {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  border: none;
-  background-color: transparent;
-  font-size: 48px;
-  color: black;
-  padding: 0;
-  line-height: 0;
-  margin: 0;
-  margin-left: auto;
-  outline: none;
-}
-
-.hamburger:hover {
-  background-color: transparent;
-  outline: none;
-}
-
 /* navbar styles */
 
 .navbar {
@@ -63,3 +40,43 @@ code {
 .menu a:hover {
   background-color: #ffcccc;
 }
+
+/* hamburger menu styles */
+
+.hamburger {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 48px;
+  color: black;
+  padding: 0;
+  line-height: 0;
+  margin: 0;
+  margin-left: auto;
+  outline: none;
+}
+
+.hamburger:hover {
+  background-color: transparent;
+  outline: none;
+}
+
+/* @media screen and (min-width: 768px) {
+  .mainTitle {
+    font-size: 96px;
+    line-height: 111px;
+  }
+  .secondTitle {
+    font-size: 40px;
+    line-height: 20px;
+    padding: 20px;
+  }
+  .thirdTitle {
+    font-size: 24px;
+    line-height: 14px;
+    padding-top: 20px;
+  }
+} */

@@ -32,13 +32,25 @@ const FilterCategories = ({ category, setCategory }) => {
     },
   ];
 
+  const zobrazKategorii = categories.find((item) => item.key === category);
+
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="category-data">
         <div className="info-category" onClick={() => setRollOut(true)}>
-          {category
-            ? categories.find((item) => item.key === category).name
-            : 'Choose a category'}
+          {category && zobrazKategorii ? (
+            <>
+              {zobrazKategorii.name}
+              <img
+                className="delete-img"
+                src="/images/cross.svg"
+                alt="cross button"
+                onClick={() => setCategory(null)}
+              />
+            </>
+          ) : (
+            'Choose a category'
+          )}
         </div>
         {rollOut && (
           <div className="category-list">
