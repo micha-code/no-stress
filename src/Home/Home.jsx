@@ -37,8 +37,12 @@ function Home() {
       </div>
 
       <div className="filters">
-        <FilterCountries setCountry={setCountry} country={country} />
-        <FilterCategories setCategory={setCategory} category={category} />
+        <div className="container">
+          <FilterCountries setCountry={setCountry} country={country} />
+        </div>
+        <div className="container">
+          <FilterCategories setCategory={setCategory} category={category} />
+        </div>
       </div>
       {coverGlobe ? null : (
         <Globe

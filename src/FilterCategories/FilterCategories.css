@@ -2,17 +2,12 @@
   box-sizing: border-box;
 }
 
-.container {
-  margin-left: auto;
-  display: flex;
-  text-align: center;
-}
-
 .category-data {
   position: relative;
 }
 
 .info-category {
+  min-width: 250px;
   padding: 10px;
   border-radius: 10px;
   background: rgba(152, 191, 173, 0.35);
@@ -26,6 +21,7 @@
   font-size: 20px;
   line-height: 24px;
   position: relative;
+  margin-bottom: 10%;
 }
 
 .category-list {
