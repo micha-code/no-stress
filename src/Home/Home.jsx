@@ -21,6 +21,13 @@ function Home() {
         />
         <h3 className="thirdTitle">Where is the next adventure taking you?</h3>
       </header>
+      <div className="map-globe">
+        <img
+          className="map-globe-img"
+          src="/images/MapBlack.svg"
+          alt="map-icon"
+        />
+      </div>
 
       <div className="filters">
         <FilterCountries setCountry={setCountry} country={country} />

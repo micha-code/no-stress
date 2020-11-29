@@ -54,6 +54,7 @@ const Globe = ({ country }) => {
 
   return (
     <Viewer
+      id="map"
       ref={viewer}
       Scene
       backgroundColor={Color.CORNFLOWERBLUE}

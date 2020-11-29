@@ -65,7 +65,8 @@ p.card__text {
 }
 
 .category__web,
-.category__map {
+.category__map,
+.category__googlemap {
   color: white;
   width: 3rem;
   height: 3rem;
