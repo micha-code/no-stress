@@ -58,9 +58,21 @@ left: 30%;
 top: 25%;
 */
 
-.map-globe-img {
+.map-btn {
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
   margin-left: 80%;
   margin-top: -5%;
+  border: none;
+  background: none;
+  border-radius: 20%;
+}
+
+.map-btn:hover {
+  background-color: none;
+}
+
+.map-globe-img {
   width: 125px;
   height: 94px;
 }

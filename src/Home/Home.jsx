@@ -8,6 +8,7 @@ import CardList from '../CardList/CardList.jsx';
 function Home() {
   const [country, setCountry] = useState('CZ');
   const [category, setCategory] = useState(null);
+  const [coverGlobe, setCoverGlobe] = useState(false);
 
   return (
     <>
@@ -22,20 +23,34 @@ function Home() {
         <h3 className="thirdTitle">Where is the next adventure taking you?</h3>
       </header>
       <div className="map-globe">
-        <img
-          className="map-globe-img"
-          src="/images/MapBlack.svg"
-          alt="map-icon"
-        />
+        <button
+          onClick={() => setCoverGlobe((value) => !value)}
+          className="map-btn"
+        >
+          <img
+            className="map-globe-img"
+            src="/images/MapBlack.svg"
+            alt="map-icon"
+          />
+        </button>
       </div>
 
       <div className="filters">
         <FilterCountries setCountry={setCountry} country={country} />
         <FilterCategories setCategory={setCategory} category={category} />
       </div>
-      <Globe country={country} />
+      {coverGlobe ? null : <Globe country={country} />}
       <CardList country={country} category={category} />
     </>
   );
 }
 export default Home;
+
+/*
+const handleCoverGlobe = () => {
+    if (!setCoverGlobe) {
+      return setCoverGlobe(true);
+    }
+    return setCoverGlobe(false);
+  };
+*/
