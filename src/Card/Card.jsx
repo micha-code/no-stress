@@ -18,7 +18,7 @@ const Card = (props) => {
             <p className="card__text">{props.text}</p>
           </div>
           <div className="card__icons">
-            <a href={`${props.link}`}>
+            <a href={`${props.link}`} target="_blank" rel="noreferrer">
               <img
                 className="category__web"
                 src="/images/webWithClick.svg"
@@ -28,11 +28,11 @@ const Card = (props) => {
             <a href={`${props.map}`}>
               <img className="category__map" src="/images/map.svg" alt="map" />
             </a>
-            <a href={`${props.map}`}>
+            <a href={`${props.map}`} target="_blank" rel="noreferrer">
               <img
                 className="category__googlemap"
                 src="/images/googlemap.svg"
-                alt="map"
+                alt="google"
               />
             </a>
           </div>
