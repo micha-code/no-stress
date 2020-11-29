@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 import './style.css';
 import { data } from '../Data/data.js';
 import Card from '../Card/Card';
@@ -7,7 +6,7 @@ import Card from '../Card/Card';
 const CardList = ({ country, category }) => {
   return (
     <>
-      <div className="container">
+      <div className="containerCards">
         {data
           .filter((item) => item.country === country)
           .filter((item) => {
