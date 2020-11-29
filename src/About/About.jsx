@@ -107,7 +107,7 @@ const About = () => {
               alt="Github"
             />
           </a>
-          <a href="https://github.com/ivze" target="_blank">
+          <a href="https://ivze.github.io/ivze/" target="_blank">
             <img
               src="images/web.svg"
               width="25"
