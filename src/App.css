@@ -34,3 +34,32 @@ code {
   background-color: transparent;
   outline: none;
 }
+
+/* navbar styles */
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 1px;
+  margin-left: 40px;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.menu a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: black;
+}
+
+.menu a:hover {
+  background-color: #ffcccc;
+}
