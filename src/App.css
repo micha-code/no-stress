@@ -64,7 +64,7 @@ code {
   outline: none;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .mainTitle {
     font-size: 96px;
     line-height: 111px;
@@ -79,4 +79,4 @@ code {
     line-height: 14px;
     padding-top: 20px;
   }
-}
+} */
