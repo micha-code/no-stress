@@ -67,21 +67,23 @@ const Globe = ({ country }) => {
       backgroundColor={Color.CORNFLOWERBLUE}
       terrainProvider={terrainProvider}
     >
-      <Entity /*position={position} name="Tokyo"*/>
+      <Entity>
         <BillboardCollection>
-           {data.map((item) => (
-            <Billboard
-              position={Cartesian3.fromDegrees(
-                item.longitude,
-                item.latitude,
-                100,
-              )}
-              image={`images/pin-${item.category}.svg`}
-              scale={1.0}
-              horizontalOrigin={HorizontalOrigin.CENTER}
-              verticalOrigin={VerticalOrigin.BOTTOM}
-            ></Billboard>
-          ))}
+          {data
+            .filter((item) => item.country === country)
+            .map((item) => (
+              <Billboard
+                position={Cartesian3.fromDegrees(
+                  item.longitude,
+                  item.latitude,
+                  100,
+                )}
+                image={`images/pin-${item.category}.svg`}
+                scale={1.0}
+                horizontalOrigin={HorizontalOrigin.CENTER}
+                verticalOrigin={VerticalOrigin.BOTTOM}
+              ></Billboard>
+            ))}
         </BillboardCollection>
       </Entity>
     </Viewer>
