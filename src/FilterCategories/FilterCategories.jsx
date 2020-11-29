@@ -16,21 +16,37 @@ const FilterCategories = (category) => {
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="category-data">
         <div className="info-category" onClick={() => setRollOut(true)}>
           {selected}
         </div>
         {rollOut && (
-          <>
-            <div onClick={() => handleSelected('Accomodation')}>
+          <div className="category-list">
+            <div
+              className="category-choice"
+              onClick={() => handleSelected('Accomodation')}
+            >
               Accomodation
             </div>
-            <div onClick={() => handleSelected('Food and Drinks')}>
+            <div
+              className="category-choice"
+              onClick={() => handleSelected('Food and Drinks')}
+            >
               Food and Drinks
             </div>
-            <div onClick={() => handleSelected('Me time')}>Me time</div>
-            <div onClick={() => handleSelected('Must do')}>Must do</div>
-          </>
+            <div
+              className="category-choice"
+              onClick={() => handleSelected('Me time')}
+            >
+              Me time
+            </div>
+            <div
+              className="category-choice"
+              onClick={() => handleSelected('Must do')}
+            >
+              Must do
+            </div>
+          </div>
         )}
       </form>
     </div>

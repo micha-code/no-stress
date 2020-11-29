@@ -6,7 +6,7 @@ import Card from '../Card/Card';
 const CardList = () => {
   return (
     <>
-      <div className="container">
+      <div className="containerCards">
         {data.map((props) => (
           <Card
             name={props.name}

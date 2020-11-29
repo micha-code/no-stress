@@ -798,17 +798,6 @@ export const data = [
     map: 'https://goo.gl/maps/poZZEKTwQdYBpoUC8',
   },
   {
-    name: '',
-    countryName: 'Russia',
-    country: 'RU',
-    latitude: 61.52401,
-    longitude: 105.318756,
-    category: '',
-    text: '',
-    link: '',
-    map: '',
-  },
-  {
     name: 'Nikola Tesla Museum',
     countryName: 'Serbia ',
     country: 'RS',
