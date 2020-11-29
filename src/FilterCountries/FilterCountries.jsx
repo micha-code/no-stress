@@ -33,7 +33,7 @@ const FilterCountries = ({ country, setCountry }) => {
       ));
 
     setFilteredCountries(userFilteredCountries);
-  }, [userFilter]);
+  }, [userFilter, setCountry]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
