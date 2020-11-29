@@ -8,7 +8,11 @@
   text-align: center;
 }
 
-select {
+.category-data {
+  position: relative;
+}
+
+.info-category {
   padding: 10px;
   border-radius: 10px;
   background: rgba(152, 191, 173, 0.35);
@@ -21,4 +25,20 @@ select {
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
+  position: relative;
+}
+
+.category-list {
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  left: 0;
+  right: 0;
+}
+
+.category-choice {
+  border: 1px solid rgba(152, 191, 173, 0.35);
+  box-sizing: border-box;
+  border-radius: 9px;
+  padding: 1rem;
 }
