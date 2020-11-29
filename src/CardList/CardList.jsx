@@ -3,7 +3,7 @@ import './style.css';
 import Card from '../Card/Card';
 import database from '../Database/Database.js';
 
-const CardList = ({ country, category }) => {
+const CardList = ({ country, category, setSelectedPoint }) => {
   const [cards, setCards] = useState(null);
   useEffect(() => {
     database
@@ -29,8 +29,8 @@ const CardList = ({ country, category }) => {
               category={item.category}
               link={item.link}
               map={item.map}
-              latitude={item.latitude}
-              longitude={item.longitude}
+              item={item}
+              setSelectedPoint={setSelectedPoint}
             />
           ));
         setCards(cardList);
