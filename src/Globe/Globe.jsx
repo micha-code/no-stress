@@ -69,21 +69,19 @@ const Globe = ({ country }) => {
     >
       <Entity>
         <BillboardCollection>
-          {data
-            .filter((item) => item.country === country)
-            .map((item) => (
-              <Billboard
-                position={Cartesian3.fromDegrees(
-                  item.longitude,
-                  item.latitude,
-                  100,
-                )}
-                image={`images/pin-${item.category}.svg`}
-                scale={1.0}
-                horizontalOrigin={HorizontalOrigin.CENTER}
-                verticalOrigin={VerticalOrigin.BOTTOM}
-              ></Billboard>
-            ))}
+          {data.map((item) => (
+            <Billboard
+              position={Cartesian3.fromDegrees(
+                item.longitude,
+                item.latitude,
+                100,
+              )}
+              image={`images/pin-${item.category}.svg`}
+              scale={1.0}
+              horizontalOrigin={HorizontalOrigin.CENTER}
+              verticalOrigin={VerticalOrigin.BOTTOM}
+            ></Billboard>
+          ))}
         </BillboardCollection>
       </Entity>
     </Viewer>
@@ -91,3 +89,7 @@ const Globe = ({ country }) => {
 };
 
 export default Globe;
+
+/*
+.filter((item) => item.country === country)
+*/

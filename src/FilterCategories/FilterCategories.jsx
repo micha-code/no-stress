@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './FilterCategories.css';
 
-const FilterCategories = (category) => {
-  const [selected, setSelected] = useState('Accomodation');
+const FilterCategories = ({ category, setCategory }) => {
   const [rollOut, setRollOut] = useState(false);
 
   const handleSubmit = (e) => {
@@ -11,38 +10,38 @@ const FilterCategories = (category) => {
 
   const handleSelected = (category) => {
     setRollOut(false);
-    setSelected(category);
+    setCategory(category);
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="category-data">
         <div className="info-category" onClick={() => setRollOut(true)}>
-          {selected}
+          {category}
         </div>
         {rollOut && (
           <div className="category-list">
             <div
               className="category-choice"
-              onClick={() => handleSelected('Accomodation')}
+              onClick={() => handleSelected('accomodation')}
             >
               Accomodation
             </div>
             <div
               className="category-choice"
-              onClick={() => handleSelected('Food and Drinks')}
+              onClick={() => handleSelected('restaurant')}
             >
               Food and Drinks
             </div>
             <div
               className="category-choice"
-              onClick={() => handleSelected('Me time')}
+              onClick={() => handleSelected('meTime')}
             >
               Me time
             </div>
             <div
               className="category-choice"
-              onClick={() => handleSelected('Must do')}
+              onClick={() => handleSelected('mustDo')}
             >
               Must do
             </div>

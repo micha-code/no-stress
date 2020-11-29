@@ -7,7 +7,7 @@ import CardList from '../CardList/CardList.jsx';
 
 function Home() {
   const [country, setCountry] = useState('CZ');
-  const [category, setCategory] = useState('mustdo');
+  const [category, setCategory] = useState(null);
 
   return (
     <>
@@ -23,7 +23,7 @@ function Home() {
         <FilterCategories setCategory={setCategory} category={category} />
       </div>
       <Globe country={country} />
-      <CardList />
+      <CardList country={country} category={category} />
     </>
   );
 }
