@@ -5,7 +5,7 @@ import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
 import { data } from '../Data/data.js';
 
-const Globe = ({ country }) => {
+const Globe = ({ country, selectedPoint }) => {
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
@@ -51,6 +51,18 @@ const Globe = ({ country }) => {
       }
     };
   }, [viewer]);
+
+  useEffect(() => {
+    if (selectedPoint) {
+      viewer.current.cesiumElement.camera.flyTo({
+        destination: Cartesian3.fromDegrees(
+          selectedPoint.longitude,
+          selectedPoint.latitude,
+          150000,
+        ),
+      });
+    }
+  }, [viewer, selectedPoint]);
 
   return (
     <Viewer

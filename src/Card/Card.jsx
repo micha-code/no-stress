@@ -30,6 +30,7 @@ const Card = (props) => {
               onClick={() => {
                 const map = document.querySelector('#map');
                 window.scrollTo(0, map.offsetTop);
+                props.setSelectedPoint(props.item);
               }}
             >
               <img className="category__map" src="/images/map.svg" alt="map" />

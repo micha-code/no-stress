@@ -9,6 +9,7 @@ function Home() {
   const [country, setCountry] = useState('CZ');
   const [category, setCategory] = useState(null);
   const [coverGlobe, setCoverGlobe] = useState(false);
+  const [selectedPoint, setSelectedPoint] = useState(null);
 
   return (
     <>
@@ -39,8 +40,18 @@ function Home() {
         <FilterCountries setCountry={setCountry} country={country} />
         <FilterCategories setCategory={setCategory} category={category} />
       </div>
-      {coverGlobe ? null : <Globe country={country} />}
-      <CardList country={country} category={category} />
+      {coverGlobe ? null : (
+        <Globe
+          country={country}
+          category={category}
+          selectedPoint={selectedPoint}
+        />
+      )}
+      <CardList
+        country={country}
+        category={category}
+        setSelectedPoint={setSelectedPoint}
+      />
     </>
   );
 }
