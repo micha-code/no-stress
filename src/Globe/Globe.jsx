@@ -1,12 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import {
-  Viewer,
-  Entity,
-  PointGraphics,
-  EntityDescription,
-  BillboardCollection,
-  Billboard,
-} from 'resium';
+import { Viewer, Entity, BillboardCollection, Billboard } from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 import './style.css';
 import { data } from '../Data/data.js';
 import Card from '../Card/Card';
