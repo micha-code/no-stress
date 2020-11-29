@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.2.2",
     "cesium": "^1.75.0",
     "craco-cesium": "^1.2.0",
+    "firebase": "^8.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
