@@ -25,7 +25,13 @@ const Card = (props) => {
                 alt="web"
               />
             </a>
-            <a href={`${props.map}`}>
+            <a
+              href
+              onClick={() => {
+                const map = document.querySelector('#map');
+                window.scrollTo(0, map.offsetTop);
+              }}
+            >
               <img className="category__map" src="/images/map.svg" alt="map" />
             </a>
             <a href={`${props.map}`} target="_blank" rel="noreferrer">

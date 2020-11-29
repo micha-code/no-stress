@@ -22,6 +22,8 @@ const CardList = ({ country, category }) => {
               category={item.category}
               link={item.link}
               map={item.map}
+              latitude={item.latitude}
+              longitude={item.longitude}
             />
           ))}
       </div>
