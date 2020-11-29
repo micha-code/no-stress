@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './Home/Home';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import About from './About/About.jsx';
 import AddNew from './Add-new/Add-new.jsx';
 
 const App = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Router>
       <nav className="navbar">
@@ -14,17 +15,26 @@ const App = () => {
           src="images/logo-menu.svg"
           alt="Logo no-stress"
         />
-        <ul className="menu">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/add-new">Add new</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
+        <button
+          className={open ? 'hamburger hamburger_open' : 'hamburger'}
+          aria-label="menu"
+          onClick={() => setOpen(!open)}
+        >
+          ...
+        </button>
+        {open && (
+          <ul className="menu">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/add-new">Add new</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        )}
       </nav>
       <main>
         <Switch>
