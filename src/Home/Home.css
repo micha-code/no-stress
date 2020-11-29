@@ -2,6 +2,62 @@
   box-sizing: border-box;
 }
 
+.mountainImg {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mainTitle {
+  font-size: 40px;
+  font-family: Sail;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.secondTitle {
+  font-size: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: black;
+}
+
+.thirdTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainTitle {
+    font-size: 96px;
+    line-height: 111px;
+  }
+  .secondTitle {
+    font-size: 40px;
+    line-height: 20px;
+    padding: 20px;
+  }
+  .thirdTitle {
+    font-size: 24px;
+    line-height: 14px;
+    padding-top: 20px;
+  }
+}
+
+/*
+position: absolute;
+left: 30%;
+top: 25%;
+*/
+
 @media screen and (min-width: 768px) {
   .filters {
     display: flex;
