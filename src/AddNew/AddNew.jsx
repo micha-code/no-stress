@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './style.css';
+import database from '../Database/Database.js';
+import { countries } from '../Data/countries';
 
 const AddNew = () => {
+  const form = useRef(null);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(form.current);
+
+    database
+      .collection('Places')
+      .add({
+        name: data.get('name'),
+        country: data.get('country'),
+        latitude: data.get('latitude'),
+        longitude: data.get('longitude'),
+        category: data.get('category'),
+        text: data.get('text'),
+        link: data.get('link'),
+        map: data.get('map'),
+      })
+      .then(function (docRef) {
+        console.log('document with ID', docRef.id);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
   return (
     <>
       <div className="icon-bar">
@@ -50,7 +77,7 @@ const AddNew = () => {
         corrupti! Ipsum.
       </p>
 
-      <form>
+      <form ref={form} onSubmit={handleSubmit}>
         <div>
           <label>
             ADD NAME
@@ -79,6 +106,18 @@ const AddNew = () => {
           <label>
             ADD WEBSITE
             <input type="url" name="link" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Select country
+            <select name="country">
+              {countries.map((country) => (
+                <option key={country.country} value={country.country}>
+                  {country.name}
+                </option>
+              ))}
+            </select>
           </label>
         </div>
         <div>
