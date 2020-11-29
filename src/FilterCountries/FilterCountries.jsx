@@ -44,34 +44,29 @@ const FilterCountries = ({ country, setCountry }) => {
   });
 
   return (
-    <div className="container">
-      <div className="country-info">
-        <form onSubmit={handleSubmit} className="country-data">
-          <div className="country-holder">
-            {!editMode && (
-              <div
-                className="country-selected"
-                onClick={() => setEditMode(true)}
-              >
-                Selected country: {currentCountry.name || 'none'}
-              </div>
-            )}
+    <div className="country-info">
+      <form onSubmit={handleSubmit} className="country-data">
+        <div className="country-holder">
+          {!editMode && (
+            <div className="country-selected" onClick={() => setEditMode(true)}>
+              Selected country: {currentCountry.name || 'none'}
+            </div>
+          )}
 
-            {editMode && (
-              <input
-                className="input-countries"
-                type="text"
-                placeholder="Enter country"
-                onChange={(e) => {
-                  // console.log(e.target.value);
-                  setUserFilter(e.target.value);
-                }}
-              />
-            )}
-          </div>
-          {editMode && <div className="country-list">{filteredCountries}</div>}
-        </form>
-      </div>
+          {editMode && (
+            <input
+              className="input-countries"
+              type="text"
+              placeholder="Enter country"
+              onChange={(e) => {
+                // console.log(e.target.value);
+                setUserFilter(e.target.value);
+              }}
+            />
+          )}
+        </div>
+        {editMode && <div className="country-list">{filteredCountries}</div>}
+      </form>
     </div>
   );
 };
