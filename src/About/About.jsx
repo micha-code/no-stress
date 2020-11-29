@@ -7,6 +7,7 @@ const About = () => {
       <div className="icon-bar">
         <a
           href="https://www.facebook.com/nostresstravelguide"
+          target="_blank"
           className="facebook"
         >
           <img
@@ -19,6 +20,7 @@ const About = () => {
         </a>
         <a
           href="https://www.instagram.com/nostresstravelguide/"
+          target="_blank"
           className="instagram"
         >
           <img
@@ -29,7 +31,11 @@ const About = () => {
             alt="Instagram"
           />
         </a>
-        <a href="nostresstravelguide@gmail.com " className="email">
+        <a
+          href="nostresstravelguide@gmail.com "
+          target="_blank"
+          className="email"
+        >
           <img
             src="images/email.svg"
             width="30"
@@ -54,6 +60,7 @@ const About = () => {
         <a
           style={{ color: '#ff1493' }}
           href="https://www.czechitas.cz/en/"
+          target="_blank"
           className="czechitas"
         >
           Czechitas{' '}
@@ -82,7 +89,7 @@ const About = () => {
             multinational. In the evenings I study React and JavaScript within
             Czechitas Digital Academy.
           </p>
-          <a href="https://www.linkedin.com/in/ivonaze">
+          <a href="https://www.linkedin.com/in/ivonaze" target="_blank">
             <img
               src="images/linkedin.svg"
               width="25"
@@ -91,7 +98,7 @@ const About = () => {
               alt="Linkedin"
             />
           </a>
-          <a href="https://github.com/ivze">
+          <a href="https://github.com/ivze" target="_blank">
             <img
               src="images/github.svg"
               width="25"
@@ -100,7 +107,7 @@ const About = () => {
               alt="Github"
             />
           </a>
-          <a href="https://github.com/ivze">
+          <a href="https://ivze.github.io/ivze/" target="_blank">
             <img
               src="images/web.svg"
               width="25"
@@ -128,7 +135,10 @@ const About = () => {
             go viral. In the meantime, you will probably find me on the beach or
             in the mountains.
           </p>
-          <a href="https://www.linkedin.com/in/michaela-davidova">
+          <a
+            href="https://www.linkedin.com/in/michaela-davidova"
+            target="_blank"
+          >
             <img
               src="images/linkedin.svg"
               width="25"
@@ -137,7 +147,7 @@ const About = () => {
               alt="Linkedin"
             />
           </a>
-          <a href="https://github.com/micha-code/">
+          <a href="https://github.com/micha-code/" target="_blank">
             <img
               src="images/github.svg"
               width="25"
@@ -146,7 +156,7 @@ const About = () => {
               alt="Github"
             />
           </a>
-          <a href="https://github.com/micha-code/">
+          <a href="https://github.com/micha-code/" target="_blank">
             <img
               src="images/web.svg"
               width="25"
@@ -171,7 +181,10 @@ const About = () => {
             ipsam accusamus debitis quibusdam delectus consectetur odio,
             eligendi fugit non vel, amet provident modi!
           </p>
-          <a href="https://www.linkedin.com/in/michaela-davidova">
+          <a
+            href="https://www.linkedin.com/in/michaela-davidova"
+            target="_blank"
+          >
             <img
               src="images/linkedin.svg"
               width="25"
@@ -180,7 +193,7 @@ const About = () => {
               alt="Linkedin"
             />
           </a>
-          <a href="https://github.com/micha-code/">
+          <a href="https://github.com/micha-code/" target="_blank">
             <img
               src="images/github.svg"
               width="25"
@@ -189,7 +202,7 @@ const About = () => {
               alt="Github"
             />
           </a>
-          <a href="https://github.com/micha-code/">
+          <a href="https://github.com/micha-code/" target="_blank">
             <img
               src="images/web.svg"
               width="25"

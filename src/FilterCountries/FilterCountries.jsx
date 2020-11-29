@@ -39,6 +39,10 @@ const FilterCountries = ({ country, setCountry }) => {
     e.preventDefault();
   };
 
+  const currentCountry = countries.find((item) => {
+    return country === item.country;
+  });
+
   return (
     <div className="container">
       <div className="country-info">
@@ -49,7 +53,7 @@ const FilterCountries = ({ country, setCountry }) => {
                 className="country-selected"
                 onClick={() => setEditMode(true)}
               >
-                vybrano je: {country}
+                Selected country: {currentCountry.name || 'none'}
               </div>
             )}
 
