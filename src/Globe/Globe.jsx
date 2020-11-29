@@ -34,21 +34,20 @@ const Globe = ({ country }) => {
 
   useEffect(() => {
     const pageStep = 25;
-    if (viewer.current && viewer.current.cesiumElement) {
-      viewer.current.cesiumElement._element.addEventListener(
-        'wheel',
-        function (event) {
-          if (event.deltaY < 0) {
-            window.scroll(0, window.pageYOffset - pageStep);
-          } else {
-            window.scroll(0, window.pageYOffset + pageStep);
-          }
-        },
-      );
+    const cesiumEl = viewer.current && viewer.current.cesiumElement;
+    const listener = function (event) {
+      if (event.deltaY < 0) {
+        window.scroll(0, window.pageYOffset - pageStep);
+      } else {
+        window.scroll(0, window.pageYOffset + pageStep);
+      }
+    };
+    if (cesiumEl) {
+      cesiumEl._element.addEventListener('wheel', listener);
     }
     return function cleanup() {
-      if (viewer.current && viewer.current.cesiumElement) {
-        viewer.current.cesiumElement._element.removeEventListener('wheel');
+      if (cesiumEl) {
+        cesiumEl._element.removeEventListener('wheel', listener);
       }
     };
   }, [viewer]);
