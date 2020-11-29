@@ -28,6 +28,13 @@ const Card = (props) => {
             <a href={`${props.map}`}>
               <img className="category__map" src="/images/map.svg" alt="map" />
             </a>
+            <a href={`${props.map}`}>
+              <img
+                className="category__googlemap"
+                src="/images/googlemap.svg"
+                alt="map"
+              />
+            </a>
           </div>
         </div>
       </div>
