@@ -1,4 +1,4 @@
-export const data = [
+exports.data = [
   {
     name: 'Parque de Agua Termal - Termas Cacheuta',
     countryName: 'Argentina',
