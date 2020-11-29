@@ -58,6 +58,13 @@ left: 30%;
 top: 25%;
 */
 
+.map-globe-img {
+  margin-left: 80%;
+  margin-top: -5%;
+  width: 125px;
+  height: 94px;
+}
+
 @media screen and (min-width: 768px) {
   .filters {
     display: flex;
