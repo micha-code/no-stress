@@ -13,38 +13,43 @@ const FilterCategories = ({ category, setCategory }) => {
     setCategory(category);
   };
 
+  const categories = [
+    {
+      key: 'accomodation',
+      name: 'Accomodation',
+    },
+    {
+      key: 'restaurant',
+      name: 'Food and Drinks',
+    },
+    {
+      key: 'meTime',
+      name: 'Me Time',
+    },
+    {
+      key: 'mustDo',
+      name: 'Must Do',
+    },
+  ];
+
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="category-data">
         <div className="info-category" onClick={() => setRollOut(true)}>
-          {category}
+          {category
+            ? categories.find((item) => item.key === category).name
+            : 'Choose a category'}
         </div>
         {rollOut && (
           <div className="category-list">
-            <div
-              className="category-choice"
-              onClick={() => handleSelected('accomodation')}
-            >
-              Accomodation
-            </div>
-            <div
-              className="category-choice"
-              onClick={() => handleSelected('restaurant')}
-            >
-              Food and Drinks
-            </div>
-            <div
-              className="category-choice"
-              onClick={() => handleSelected('meTime')}
-            >
-              Me time
-            </div>
-            <div
-              className="category-choice"
-              onClick={() => handleSelected('mustDo')}
-            >
-              Must do
-            </div>
+            {categories.map((item) => (
+              <div
+                className="category-choice"
+                onClick={() => handleSelected(item.key)}
+              >
+                {item.name}
+              </div>
+            ))}
           </div>
         )}
       </form>
@@ -55,25 +60,7 @@ const FilterCategories = ({ category, setCategory }) => {
 export default FilterCategories;
 
 /*
-<div className="container">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <select>
-            <option className="info-category" value="accomodation">
-              Accomodation
-            </option>
-            <option className="info-category" value="restaurant">
-              Food and Drinks
-            </option>
-            <option className="info-category" value="metime">
-              Me time
-            </option>
-            <option className="info-category" value="mustdo">
-              Must do
-            </option>
-          </select>
-        </div>
-      </form>
-    </div>
+
+ {rollOut ? { category } : 'Choose a category'}   
 
 */

@@ -58,7 +58,7 @@ left: 30%;
 top: 25%;
 */
 
-.map-btn {
+button.map-btn {
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
   margin-left: 80%;
@@ -66,10 +66,13 @@ top: 25%;
   border: none;
   background: none;
   border-radius: 20%;
+  padding: 5px;
 }
 
-.map-btn:hover {
-  background-color: none;
+button.map-btn:hover,
+button.map-btn:focus {
+  background-color: rgba(152, 191, 173, 0.35);
+  border: none;
 }
 
 .map-globe-img {
