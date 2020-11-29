@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Home/Home';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import About from './About/About.jsx';
-import AddNew from './Add-new/Add-new.jsx';
+import AddNew from './AddNew/AddNew.jsx';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ const App = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/add-new">Add new</Link>
+              <Link to="/addNew">Add new</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -41,7 +41,7 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/add-new">
+          <Route path="/addNew">
             <AddNew />
           </Route>
           <Route path="/about">
