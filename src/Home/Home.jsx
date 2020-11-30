@@ -21,21 +21,20 @@ function Home() {
           src="images/mountainCropped.jpg"
           alt="mainMountainPicture"
         />
-        <h3 className="thirdTitle">Where is the next adventure taking you?</h3>
+        <h3 className="thirdTitle">
+          Where is the next adventure taking you?{' '}
+          <button
+            onClick={() => setCoverGlobe((value) => !value)}
+            className="map-btn"
+          >
+            <img
+              className="map-globe-img"
+              src="/images/MapBlack.svg"
+              alt="map-icon"
+            />
+          </button>
+        </h3>
       </header>
-      <div className="map-globe">
-        <button
-          onClick={() => setCoverGlobe((value) => !value)}
-          className="map-btn"
-        >
-          <img
-            className="map-globe-img"
-            src="/images/MapBlack.svg"
-            alt="map-icon"
-          />
-        </button>
-      </div>
-
       <div className="filters">
         <div className="container">
           <FilterCountries setCountry={setCountry} country={country} />
