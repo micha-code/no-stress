@@ -69,18 +69,16 @@ const AddNew = () => {
 
       <h1>Add new!</h1>
       <p className="intro">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempore
-        dolor, maxime iure eos impedit veritatis. Eveniet optio obcaecati quos
-        impedit error magnam voluptatem perferendis consequuntur similique illo!
-        Rerum debitis dolorum quo beatae rem at velit, omnis maxime ipsam
-        necessitatibus non, harum minima nostrum impedit autem, ut voluptas
-        corrupti! Ipsum.
+        Are you an avid traveller? Do you know some hidden gem in remote
+        regions? Or maybe a favorite cafe in your home town, which you want to
+        support and which would appreciate your fellow adventurous girls? Now is
+        your time to shine! Share your tips and recommendations with others!
       </p>
 
       <form ref={form} onSubmit={handleSubmit}>
         <div>
           <label>
-            ADD NAME
+            ADD NAME <br></br>
             <input type="text" name="name" />
           </label>
         </div>
@@ -98,19 +96,19 @@ const AddNew = () => {
         </div>
         <div>
           <label>
-            ADD DESCRIPTION
+            ADD DESCRIPTION<br></br>
             <input type="text" name="text" />
           </label>
         </div>
         <div>
           <label>
-            ADD WEBSITE
+            ADD WEBSITE<br></br>
             <input type="url" name="link" />
           </label>
         </div>
         <div>
           <label>
-            Select country
+            SELECT COUNTRY<br></br>
             <select name="country">
               {countries.map((country) => (
                 <option key={country.country} value={country.country}>
@@ -122,22 +120,31 @@ const AddNew = () => {
         </div>
         <div>
           <label>
-            ADD ADDRESS
+            ADD ADDRESS, please insert link to Google map <br></br>
             <input type="url" name="map" />
           </label>
         </div>
         <div>
           <label>
-            ADD LATITUDE
+            ADD LATITUDE<br></br>
             <input type="number" name="latitude" />
           </label>
+          <br></br>
           <label>
-            ADD LONGTUDE
+            ADD LONGTUDE<br></br>
             <input type="number" name="longitude" />
           </label>
         </div>
         <div>
-          <button type="submit">SUBMIT</button>
+          <button type="submit">
+            SUBMIT{' '}
+            <img
+              src="images/submit.svg"
+              alt="SUBMIT"
+              width="16"
+              className="submit"
+            />{' '}
+          </button>
         </div>
       </form>
       <footer className="footer">Czechitas project 2020</footer>
