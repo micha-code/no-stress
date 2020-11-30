@@ -75,7 +75,7 @@ const AddNew = () => {
         your time to shine! Share your tips and recommendations with others!
       </p>
 
-      <form ref={form} onSubmit={handleSubmit}>
+      <form className="form" ref={form} onSubmit={handleSubmit}>
         <div>
           <label>
             ADD NAME <br></br>
