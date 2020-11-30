@@ -76,8 +76,8 @@ button.map-btn:focus {
 }
 
 .map-globe-img {
-  width: 125px;
-  height: 94px;
+  width: 80px;
+  height: auto;
 }
 
 .container {

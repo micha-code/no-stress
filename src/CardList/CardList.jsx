@@ -35,7 +35,7 @@ const CardList = ({ country, category, setSelectedPoint }) => {
           ));
         setCards(cardList);
       });
-  }, [country, category]);
+  }, [country, category, setSelectedPoint]);
 
   return (
     <>

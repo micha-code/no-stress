@@ -8,9 +8,8 @@
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
-} 
+}
 .flag {
-
   width: 64px;
   height: 64px;
   background: url('flags64.png') no-repeat;
