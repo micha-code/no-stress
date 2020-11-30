@@ -13,6 +13,51 @@ function Home() {
 
   return (
     <>
+      <div className="icon-bar">
+        <a
+          href="https://www.facebook.com/nostresstravelguide"
+          target="_blank"
+          rel="noreferrer"
+          className="facebook"
+        >
+          <img
+            src="images/fb.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="Facebook"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/nostresstravelguide/"
+          target="_blank"
+          rel="noreferrer"
+          className="instagram"
+        >
+          <img
+            src="images/instagram.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="Instagram"
+          />
+        </a>
+        <a
+          href="nostresstravelguide@gmail.com "
+          target="_blank"
+          rel="noreferrer"
+          className="email"
+        >
+          <img
+            src="images/email.svg"
+            width="30"
+            height="30"
+            className="icon"
+            alt="email"
+          />
+        </a>
+      </div>
+
       <header className="main">
         <h1 className="mainTitle">No stress Travels!</h1>
         <h2 className="secondTitle">Living life as an adventure</h2>
