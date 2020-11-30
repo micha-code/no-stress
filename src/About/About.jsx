@@ -72,7 +72,7 @@ const About = () => {
         is a non-profit organization consisted of women and men who all share
         one common goal – to increase diversity in the IT world and to fight for
         a higher level of digital proficiency among women, girls and children as
-        well
+        well.
       </p>
 
       <div className="team">
@@ -203,7 +203,7 @@ const About = () => {
             eligendi fugit non vel, amet provident modi!
           </p>
           <a
-            href="https://www.linkedin.com/in/michaela-davidova"
+            href="https://github.com/paulinecka"
             target="_blank"
             rel="noreferrer"
           >
@@ -216,7 +216,7 @@ const About = () => {
             />
           </a>
           <a
-            href="https://github.com/micha-code/"
+            href="https://github.com/paulinecka"
             target="_blank"
             rel="noreferrer"
           >
@@ -229,7 +229,7 @@ const About = () => {
             />
           </a>
           <a
-            href="https://github.com/micha-code/"
+            href="https://github.com/paulinecka/"
             target="_blank"
             rel="noreferrer"
           >
