@@ -69,10 +69,11 @@ const AddNew = () => {
 
       <h1>Add new!</h1>
       <p className="intro">
-        Are you an avid traveller? Do you know some hidden gem in remote
-        regions? Or maybe a favorite cafe in your home town, which you want to
-        support and which would appreciate your fellow adventurous girls? Now is
-        your time to shine! Share your tips and recommendations with others!
+        Are you an avid traveller? Do you know about any hidden gem in a remote
+        region? Or maybe you have a favorite cafe in your home town, that you
+        wish to support and where fellow adventurous girls would appreciate a
+        visit? Now it is your time to shine! Share your tips, tricks and
+        recommendations with others!
       </p>
 
       <form className="form" ref={form} onSubmit={handleSubmit}>
