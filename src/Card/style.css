@@ -13,6 +13,10 @@ p.card__text {
   width: 30rem;
   margin: 1rem auto;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
 .card__meTime {
@@ -21,6 +25,10 @@ p.card__text {
   width: 30rem;
   margin: 1rem auto;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
 .card__accomodation {
@@ -29,6 +37,10 @@ p.card__text {
   width: 30rem;
   margin: 1rem auto;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
 .card__restaurant {
@@ -37,6 +49,10 @@ p.card__text {
   width: 30rem;
   margin: 1rem auto;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
 .card__body {
