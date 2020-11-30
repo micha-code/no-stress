@@ -91,26 +91,19 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-input[type='submit'] {
-  width: 100%;
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form {
   border-radius: 5px;
   background-color: #f0cfcf;
   padding: 20px;
+  margin: 1rem auto;
+  max-width: 600px;
+  min-width: 300px;
 }
 
-button {
+.submit__btn {
   width: 100%;
   padding: 14px 20px;
   margin: 8px 0;
@@ -118,11 +111,10 @@ button {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px;
-  margin: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
+.submit__btn:hover {
   background-color: #98bfad;
 }
 

@@ -136,7 +136,7 @@ const AddNew = () => {
           </label>
         </div>
         <div>
-          <button type="submit">
+          <button className="submit__btn" type="submit">
             SUBMIT{' '}
             <img
               src="images/submit.svg"
