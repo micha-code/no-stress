@@ -81,7 +81,6 @@ button.map-btn:focus {
 }
 
 .container {
-  margin-left: auto;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -91,6 +90,8 @@ button.map-btn:focus {
   text-align: center;
   color: #000000;
   flex: 1 1 30%;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {

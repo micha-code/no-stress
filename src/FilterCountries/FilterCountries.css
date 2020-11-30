@@ -8,13 +8,6 @@ html {
   font-family: Montserrat;
 }
 
-.container {
-  margin-left: auto;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
 .country-info {
   background: rgba(152, 191, 173, 0.35);
   border-radius: 9px;

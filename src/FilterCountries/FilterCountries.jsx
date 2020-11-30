@@ -49,7 +49,7 @@ const FilterCountries = ({ country, setCountry }) => {
         <div className="country-holder">
           {!editMode && (
             <div className="country-selected" onClick={() => setEditMode(true)}>
-              Selected country: {currentCountry.name || 'none'}
+              {currentCountry.name || 'none'}
             </div>
           )}
 
