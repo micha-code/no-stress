@@ -26,7 +26,7 @@ exports.data = [
   {
     name: 'Great Barrier Reef',
     countryName: 'Australia ',
-    country: 'AT',
+    country: 'AU',
     latitude: -20.2419212,
     longitude: 148.9175702,
     category: 'mustDo',

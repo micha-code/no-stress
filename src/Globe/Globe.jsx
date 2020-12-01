@@ -85,6 +85,7 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   useEffect(() => {
     database
       .collection('Places')
+      .where('country', '==', country)
       .get()
       .then((querySnapshot) => {
         const places = [];
@@ -106,6 +107,7 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
           })
           .map((item) => (
             <Billboard
+              key={item.id}
               position={Cartesian3.fromDegrees(
                 item.longitude,
                 item.latitude,

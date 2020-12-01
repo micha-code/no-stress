@@ -18,15 +18,21 @@ const Card = (props) => {
             <p className="card__text">{props.text}</p>
           </div>
           <div className="card__icons">
-            <a href={`${props.link}`} target="_blank" rel="noreferrer">
-              <img
-                className="category__web"
-                src="/images/webWithClick.svg"
-                alt="web"
-              />
-            </a>
+            {props.link && (
+              <a
+                href={`${props.link ? props.link : ''}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="category__web"
+                  src="/images/webWithClick.svg"
+                  alt="web"
+                />
+              </a>
+            )}
             <a
-              href
+              href=""
               onClick={() => {
                 const map = document.querySelector('#map');
                 window.scrollTo(0, map.offsetTop);
@@ -35,13 +41,19 @@ const Card = (props) => {
             >
               <img className="category__map" src="/images/map.svg" alt="map" />
             </a>
-            <a href={`${props.map}`} target="_blank" rel="noreferrer">
-              <img
-                className="category__googlemap"
-                src="/images/googlemap.svg"
-                alt="google"
-              />
-            </a>
+            {props.map && (
+              <a
+                href={`${props.map ? props.map : ''}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="category__googlemap"
+                  src="/images/googlemap.svg"
+                  alt="google"
+                />
+              </a>
+            )}
           </div>
         </div>
       </div>

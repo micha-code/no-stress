@@ -8,6 +8,7 @@ const CardList = ({ country, category, setSelectedPoint }) => {
   useEffect(() => {
     database
       .collection('Places')
+      .where('country', '==', country)
       .get()
       .then((querySnapshot) => {
         const places = [];
@@ -25,6 +26,7 @@ const CardList = ({ country, category, setSelectedPoint }) => {
 
           .map((item) => (
             <Card
+              key={item.id}
               name={item.name}
               text={item.text}
               category={item.category}

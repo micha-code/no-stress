@@ -15,8 +15,8 @@ const AddNew = () => {
       .add({
         name: data.get('name'),
         country: data.get('country'),
-        latitude: data.get('latitude'),
-        longitude: data.get('longitude'),
+        latitude: Number(data.get('latitude')),
+        longitude: Number(data.get('longitude')),
         category: data.get('category'),
         text: data.get('text'),
         link: data.get('link'),
@@ -128,12 +128,12 @@ const AddNew = () => {
         <div>
           <label>
             ADD LATITUDE<br></br>
-            <input type="number" name="latitude" />
+            <input type="text" name="latitude" />
           </label>
           <br></br>
           <label>
             ADD LONGTUDE<br></br>
-            <input type="number" name="longitude" />
+            <input type="text" name="longitude" />
           </label>
         </div>
         <div>
