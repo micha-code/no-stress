@@ -22,6 +22,7 @@ const CardList = ({ country, category, setSelectedPoint }) => {
             }
             return item.category === category;
           })
+
           .map((item) => (
             <Card
               name={item.name}
@@ -45,9 +46,3 @@ const CardList = ({ country, category, setSelectedPoint }) => {
 };
 
 export default CardList;
-
-// db.collection("users").get().then((querySnapshot) => {
-//   querySnapshot.forEach((doc) => {
-//       console.log(`${doc.id} => ${doc.data()}`);
-//   });
-// });

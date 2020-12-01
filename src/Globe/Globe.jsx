@@ -1,17 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Viewer, Entity, BillboardCollection, Billboard } from 'resium';
+import {
+  Viewer,
+  Entity,
+  BillboardCollection,
+  Billboard,
+  ImageryLayer,
+} from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
+import { ArcGisMapServerImageryProvider } from 'cesium';
 import database from '../Database/Database.js';
 
-const Globe = ({ country, selectedPoint, category }) => {
+const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   const [billboards, setBillboards] = useState(null);
 
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
   const terrainProvider = createWorldTerrain();
+
+  const imageryProvider = new ArcGisMapServerImageryProvider({
+    url:
+      '//services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+  });
 
   const viewer = useRef(null);
 
@@ -100,23 +112,37 @@ const Globe = ({ country, selectedPoint, category }) => {
                 100,
               )}
               image={`images/pin-${item.category}.svg`}
-              scale={1.0}
+              scale={0.5}
               horizontalOrigin={HorizontalOrigin.CENTER}
               verticalOrigin={VerticalOrigin.BOTTOM}
+              onClick={() => {
+                setSelectedPoint(item);
+              }}
             ></Billboard>
           ));
         setBillboards(billboardList);
       });
-  }, [country, category]);
+  }, [country, category, setSelectedPoint]);
 
   return (
     <Viewer
       id="map"
       ref={viewer}
       Scene
-      backgroundColor={Color.CORNFLOWERBLUE}
+      backgroundColor={Color.PINK}
       terrainProvider={terrainProvider}
+      timeline={false}
+      fullscreenButton={false}
+      baseLayerPicker={false}
+      homeButton={true}
+      creditContainer={null}
+      geocoder={false}
+      animation={false}
+      selectionIndicator={false}
+      vrButton={false}
+      infoBox={false}
     >
+      <ImageryLayer imageryProvider={imageryProvider} />
       <Entity>
         <BillboardCollection>{billboards}</BillboardCollection>
       </Entity>
