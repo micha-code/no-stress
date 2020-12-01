@@ -96,9 +96,46 @@ button.map-btn:focus {
   align-items: center;
 }
 
+.extra-card-holder {
+  position: relative;
+  left: 28%;
+  bottom: 5rem;
+}
+
+.extra-displayed-card {
+  box-shadow: 20px 20px 8px #888888;
+  width: 240px;
+  min-height: 150px;
+  border-radius: 20%;
+  z-index: 2;
+  position: relative;
+}
+
+.delete-extra-img {
+  width: 15px;
+  position: absolute;
+  top: 8px;
+  z-index: 3;
+  right: 4%;
+}
+
 @media screen and (min-width: 768px) {
   .filters {
     display: flex;
     justify-content: center;
+  }
+  .extra-displayed-card {
+    width: 30rem;
+    min-height: 300px;
+  }
+
+  .extra-card-holder {
+    left: 28%;
+    bottom: 8rem;
+  }
+  .delete-extra-img {
+    width: 25px;
+    right: 3%;
+    top: 12px;
   }
 }

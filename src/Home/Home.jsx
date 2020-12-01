@@ -99,8 +99,18 @@ function Home() {
       )}
 
       {selectedPoint ? (
-        <div className="extra-displayed-card">
-          <Card {...selectedPoint} />
+        <div className="extra-card-holder">
+          <div className="extra-displayed-card">
+            <Card {...selectedPoint} />
+            <img
+              className="delete-extra-img"
+              src="/images/whiteCross.svg"
+              alt="cross button"
+              onClick={() => {
+                setSelectedPoint(null);
+              }}
+            />
+          </div>
         </div>
       ) : null}
       <CardList
