@@ -99,7 +99,7 @@ function Home() {
       )}
 
       {selectedPoint ? (
-        <div>
+        <div className="extra-displayed-card">
           <Card {...selectedPoint} />
         </div>
       ) : null}

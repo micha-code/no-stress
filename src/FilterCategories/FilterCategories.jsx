@@ -36,7 +36,7 @@ const FilterCategories = ({ category, setCategory }) => {
 
   return (
     <form onSubmit={handleSubmit} className="category-data">
-      <div className="info-category" onClick={() => setRollOut(true)}>
+      <div className="info-category" onClick={() => setRollOut(!rollOut)}>
         {category && showCategory ? (
           <>
             {showCategory.name}
@@ -44,7 +44,10 @@ const FilterCategories = ({ category, setCategory }) => {
               className="delete-img"
               src="/images/cross.svg"
               alt="cross button"
-              onClick={() => setCategory(null)}
+              onClick={() => {
+                setCategory(null);
+                setRollOut(!rollOut);
+              }}
             />
           </>
         ) : (
@@ -88,5 +91,7 @@ const handleSelected = (category) => {
     setRollOut(false);
     setCategory(category);
   };
+
+  setCategory(null)
 
 */
