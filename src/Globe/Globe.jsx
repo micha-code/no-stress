@@ -1,15 +1,27 @@
 import React, { useEffect, useRef } from 'react';
-import { Viewer, Entity, BillboardCollection, Billboard } from 'resium';
+import {
+  Viewer,
+  Entity,
+  BillboardCollection,
+  Billboard,
+  ImageryLayer,
+} from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
 import { data } from '../Data/data.js';
+import { ArcGisMapServerImageryProvider } from 'cesium';
 
 const Globe = ({ country, selectedPoint }) => {
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
   const terrainProvider = createWorldTerrain();
+
+  const imageryProvider = new ArcGisMapServerImageryProvider({
+    url:
+      '//services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+  });
 
   const viewer = useRef(null);
 
@@ -69,9 +81,18 @@ const Globe = ({ country, selectedPoint }) => {
       id="map"
       ref={viewer}
       Scene
-      backgroundColor={Color.CORNFLOWERBLUE}
+      backgroundColor={Color.PINK}
       terrainProvider={terrainProvider}
+      timeline={false}
+      fullscreenButton={false}
+      baseLayerPicker={false}
+      homeButton={true}
+      creditContainer={null}
+      geocoder={false}
+      animation={false}
+      selectionIndicator={false}
     >
+      <ImageryLayer imageryProvider={imageryProvider} />
       <Entity>
         <BillboardCollection>
           {data.map((item) => (
