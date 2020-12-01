@@ -44,7 +44,7 @@ const FilterCountries = ({ country, setCountry }) => {
   });
 
   return (
-    <div className="country-info">
+    <div className="country-info" onMouseLeave={() => setEditMode(false)}>
       <form onSubmit={handleSubmit} className="country-data">
         <div className="country-holder">
           {!editMode && (
@@ -62,6 +62,7 @@ const FilterCountries = ({ country, setCountry }) => {
                 // console.log(e.target.value);
                 setUserFilter(e.target.value);
               }}
+              onBlur={() => setEditMode(false)}
             />
           )}
         </div>
