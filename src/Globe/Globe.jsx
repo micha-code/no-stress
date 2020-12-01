@@ -105,7 +105,7 @@ const Globe = ({ country, selectedPoint }) => {
                 100,
               )}
               image={`images/pin-${item.category}.svg`}
-              scale={1.0}
+              scale={0.5}
               horizontalOrigin={HorizontalOrigin.CENTER}
               verticalOrigin={VerticalOrigin.BOTTOM}
             ></Billboard>
