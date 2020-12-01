@@ -91,6 +91,8 @@ const Globe = ({ country, selectedPoint }) => {
       geocoder={false}
       animation={false}
       selectionIndicator={false}
+      vrButton={false}
+      infoBox={false}
     >
       <ImageryLayer imageryProvider={imageryProvider} />
       <Entity>
