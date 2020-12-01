@@ -4,6 +4,7 @@ import Globe from '../Globe/Globe.jsx';
 import FilterCountries from '../FilterCountries/FilterCountries.jsx';
 import FilterCategories from '../FilterCategories/FilterCategories.jsx';
 import CardList from '../CardList/CardList.jsx';
+import Card from '../Card/Card.jsx';
 
 function Home() {
   const [country, setCountry] = useState('CZ');
@@ -50,6 +51,12 @@ function Home() {
           selectedPoint={selectedPoint}
         />
       )}
+
+      {selectedPoint ? (
+        <div>
+          <Card {...selectedPoint} />
+        </div>
+      ) : null}
       <CardList
         country={country}
         category={category}

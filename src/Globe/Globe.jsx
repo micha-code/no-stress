@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Viewer, Entity, BillboardCollection, Billboard } from 'resium';
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
-import { data } from '../Data/data.js';
+import database from '../Database/Database.js';
 
-const Globe = ({ country, selectedPoint }) => {
+const Globe = ({ country, selectedPoint, category }) => {
+  const [billboards, setBillboards] = useState(null);
+
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
@@ -13,6 +15,7 @@ const Globe = ({ country, selectedPoint }) => {
 
   const viewer = useRef(null);
 
+  // change of country
   useEffect(() => {
     if (viewer.current) {
       viewer.current.cesiumElement.scene.screenSpaceCameraController.enableZoom = false;
@@ -32,6 +35,7 @@ const Globe = ({ country, selectedPoint }) => {
     }
   }, [country, viewer]);
 
+  // hack na scrolling
   useEffect(() => {
     const pageStep = 25;
     const cesiumEl = viewer.current && viewer.current.cesiumElement;
@@ -52,6 +56,7 @@ const Globe = ({ country, selectedPoint }) => {
     };
   }, [viewer]);
 
+  // change selected point
   useEffect(() => {
     if (selectedPoint) {
       viewer.current.cesiumElement.camera.flyTo({
@@ -64,17 +69,30 @@ const Globe = ({ country, selectedPoint }) => {
     }
   }, [viewer, selectedPoint]);
 
-  return (
-    <Viewer
-      id="map"
-      ref={viewer}
-      Scene
-      backgroundColor={Color.CORNFLOWERBLUE}
-      terrainProvider={terrainProvider}
-    >
-      <Entity>
-        <BillboardCollection>
-          {data.map((item) => (
+  // create and filter billboard
+  useEffect(() => {
+    database
+      .collection('Places')
+      .get()
+      .then((querySnapshot) => {
+        const places = [];
+        querySnapshot.forEach((doc) => {
+          places.push(doc.data());
+        });
+        const billboardList = places
+          .filter((item) => {
+            if (!country) {
+              return true;
+            }
+            return item.country === country;
+          })
+          .filter((item) => {
+            if (!category) {
+              return true;
+            }
+            return item.category === category;
+          })
+          .map((item) => (
             <Billboard
               position={Cartesian3.fromDegrees(
                 item.longitude,
@@ -86,8 +104,21 @@ const Globe = ({ country, selectedPoint }) => {
               horizontalOrigin={HorizontalOrigin.CENTER}
               verticalOrigin={VerticalOrigin.BOTTOM}
             ></Billboard>
-          ))}
-        </BillboardCollection>
+          ));
+        setBillboards(billboardList);
+      });
+  }, [country, category]);
+
+  return (
+    <Viewer
+      id="map"
+      ref={viewer}
+      Scene
+      backgroundColor={Color.CORNFLOWERBLUE}
+      terrainProvider={terrainProvider}
+    >
+      <Entity>
+        <BillboardCollection>{billboards}</BillboardCollection>
       </Entity>
     </Viewer>
   );

@@ -71,6 +71,22 @@ export default FilterCategories;
 
 /*
 
- {rollOut ? { category } : 'Choose a category'}   
+      {rollOut && (
+        <div className="category-list">
+          {categories.map((item) => (
+            <div
+              className="category-choice"
+              onClick={() => handleSelected(item.key)}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+      )}
+
+const handleSelected = (category) => {
+    setRollOut(false);
+    setCategory(category);
+  };
 
 */

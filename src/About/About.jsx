@@ -191,7 +191,7 @@ const About = () => {
           <h3 className="id">Pavlína Müllerová</h3>
           <img
             className="pictureID"
-            src="images/Misa.jpg"
+            src="images/pavlina3.jpg"
             alt="traveller Pavlina"
           />
           <p>
@@ -203,7 +203,7 @@ const About = () => {
             eligendi fugit non vel, amet provident modi!
           </p>
           <a
-            href="https://github.com/paulinecka"
+            href="https://www.linkedin.com/in/pavlína-müllerová-377106133"
             target="_blank"
             rel="noreferrer"
           >
