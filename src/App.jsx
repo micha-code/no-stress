@@ -20,7 +20,7 @@ const App = () => {
           aria-label="menu"
           onClick={() => setOpen(!open)}
         >
-          ...
+          <img className="LogoMenu" src="images/menu.svg" alt="Menu" />
         </button>
         {open && (
           <ul className="menu">

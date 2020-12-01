@@ -39,6 +39,7 @@ p {
 
 .icon-bar {
   text-align: center;
+  margin: 10px;
 }
 /* Style the social media icons with color, if you want */
 .icon-bar a:hover {
@@ -127,7 +128,7 @@ select {
 @media screen and (min-width: 768px) {
   .icon-bar {
     position: fixed;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);

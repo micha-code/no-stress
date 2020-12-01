@@ -41,6 +41,11 @@ code {
   background-color: #ffcccc;
 }
 
+.LogoImg {
+  margin: 10px;
+  width: 150px;
+}
+
 /* hamburger menu styles */
 
 .hamburger {
@@ -62,6 +67,24 @@ code {
 .hamburger:hover {
   background-color: transparent;
   outline: none;
+}
+
+@media screen and (max-width: 400px) {
+  .LogoImg {
+    width: 100px;
+  }
+  .LogoMenu {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 1px;
+    padding: 10px 0;
+    font-size: 12px;
+  }
 }
 
 /* @media screen and (min-width: 768px) {

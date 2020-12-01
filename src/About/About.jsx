@@ -70,19 +70,16 @@ const About = () => {
         >
           Czechitas{' '}
         </a>
-        is a non-profit organization consisted of women and men who all share a
-        common goal – to increase diversity in the IT world and to fight for a
-        higher level of digital proficiency among women, girls and children as
+        is a non-profit organization consisted of women and men whoall share a
+        common goal to increase diversity in the IT world and to fight for a
+        higher levelof digital proficiency among women, girls and children as
         well.<br></br>
-        <br></br>
-        This project would not be possible without our awesome,
-        the best, amazing, 
-        and just perfect mentors Pavel Kubík and Matěj Šimek.
-        Special thanks goes to incredible, fabulous and very insightful Georgyi Chernyavsky,
-        who helped us with design. We would
-        like to thank all of them for their time, 
-        expertise, great sense of humour, and patience. 
-        They were rocking! Thank you, guys!
+        <br></br> This project wouldnot be possible without our awesome, the
+        best, amazing, and just perfect mentors Pavel Kubík and Matěj Šimek.
+        Special thanks goes to incredible, fabulous and very insightful Georgyi
+        Chernyavsky, who helped us with design. We would like to thank all of
+        them for their time, expertise, great sense of humour, and patience.
+        They were rocking! Thank you, guys!{' '}
       </p>
 
       <div className="team">
