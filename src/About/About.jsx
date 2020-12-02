@@ -250,7 +250,6 @@ const About = () => {
           </a>
         </div>
       </div>
-      <footer className="footer">Czechitas project 2020</footer>
     </>
   );
 };

@@ -53,6 +53,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
+      <footer className="footer">Czechitas project 2020</footer>
     </Router>
   );
 };

@@ -138,17 +138,16 @@ const AddNew = () => {
         </div>
         <div>
           <button className="submit__btn" type="submit">
-            SUBMIT{' '}
+            SUBMIT
             <img
               src="images/submit.svg"
               alt="SUBMIT"
               width="16"
               className="submit"
-            />{' '}
+            />
           </button>
         </div>
       </form>
-      <footer className="footer">Czechitas project 2020</footer>
     </>
   );
 };
