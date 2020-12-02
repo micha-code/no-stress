@@ -31,8 +31,7 @@ const Card = (props) => {
                 />
               </a>
             )}
-            <a
-              href="#"
+            <button
               onClick={() => {
                 const map = document.querySelector('#map');
                 window.scrollTo(0, map.offsetTop);
@@ -40,7 +39,7 @@ const Card = (props) => {
               }}
             >
               <img className="category__map" src="/images/map.svg" alt="map" />
-            </a>
+            </button>
             {props.map && (
               <a
                 href={`${props.map ? props.map : ''}`}

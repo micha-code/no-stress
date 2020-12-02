@@ -2,6 +2,18 @@
   flex: 1 1 50%;
 }
 
+.card button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card button:hover {
+  background-color: transparent;
+}
+
 .card__mustDo,
 .card__meTime,
 .card__accomodation,
