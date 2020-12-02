@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Viewer,
   Entity,
@@ -9,10 +9,12 @@ import {
 import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
-import { data } from '../Data/data.js';
 import { ArcGisMapServerImageryProvider } from 'cesium';
+import database from '../Database/Database.js';
 
-const Globe = ({ country, selectedPoint }) => {
+const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
+  const [billboards, setBillboards] = useState(null);
+
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
@@ -25,6 +27,7 @@ const Globe = ({ country, selectedPoint }) => {
 
   const viewer = useRef(null);
 
+  // change of country
   useEffect(() => {
     if (viewer.current) {
       viewer.current.cesiumElement.scene.screenSpaceCameraController.enableZoom = false;
@@ -44,6 +47,7 @@ const Globe = ({ country, selectedPoint }) => {
     }
   }, [country, viewer]);
 
+  // hack na scrolling
   useEffect(() => {
     const pageStep = 25;
     const cesiumEl = viewer.current && viewer.current.cesiumElement;
@@ -64,6 +68,7 @@ const Globe = ({ country, selectedPoint }) => {
     };
   }, [viewer]);
 
+  // change selected point
   useEffect(() => {
     if (selectedPoint) {
       viewer.current.cesiumElement.camera.flyTo({
@@ -75,6 +80,51 @@ const Globe = ({ country, selectedPoint }) => {
       });
     }
   }, [viewer, selectedPoint]);
+
+  // create and filter billboard
+  useEffect(() => {
+    database
+      .collection('Places')
+      .where('country', '==', country)
+      .get()
+      .then((querySnapshot) => {
+        const places = [];
+        querySnapshot.forEach((doc) => {
+          places.push(doc.data());
+        });
+        const billboardList = places
+          .filter((item) => {
+            if (!country) {
+              return true;
+            }
+            return item.country === country;
+          })
+          .filter((item) => {
+            if (!category) {
+              return true;
+            }
+            return item.category === category;
+          })
+          .map((item) => (
+            <Billboard
+              key={item.id}
+              position={Cartesian3.fromDegrees(
+                item.longitude,
+                item.latitude,
+                100,
+              )}
+              image={`images/pin-${item.category}.svg`}
+              scale={0.5}
+              horizontalOrigin={HorizontalOrigin.CENTER}
+              verticalOrigin={VerticalOrigin.BOTTOM}
+              onClick={() => {
+                setSelectedPoint(item);
+              }}
+            ></Billboard>
+          ));
+        setBillboards(billboardList);
+      });
+  }, [country, category, setSelectedPoint]);
 
   return (
     <Viewer
@@ -96,21 +146,7 @@ const Globe = ({ country, selectedPoint }) => {
     >
       <ImageryLayer imageryProvider={imageryProvider} />
       <Entity>
-        <BillboardCollection>
-          {data.map((item) => (
-            <Billboard
-              position={Cartesian3.fromDegrees(
-                item.longitude,
-                item.latitude,
-                100,
-              )}
-              image={`images/pin-${item.category}.svg`}
-              scale={0.5}
-              horizontalOrigin={HorizontalOrigin.CENTER}
-              verticalOrigin={VerticalOrigin.BOTTOM}
-            ></Billboard>
-          ))}
-        </BillboardCollection>
+        <BillboardCollection>{billboards}</BillboardCollection>
       </Entity>
     </Viewer>
   );

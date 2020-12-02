@@ -7,12 +7,18 @@ p.card__text {
   padding: 10px;
 }
 
+.card__mustDo,
+.card__meTime,
+.card__accomodation,
+.card__restaurant {
+  width: 240px;
+  min-height: 150px;
+}
+
 .card__mustDo {
   background-color: #694a52;
   border-radius: 20px;
-  width: 30rem;
   margin: 1rem auto;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,9 +28,7 @@ p.card__text {
 .card__meTime {
   background-color: #d83957;
   border-radius: 20px;
-  width: 30rem;
   margin: 1rem auto;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -34,9 +38,7 @@ p.card__text {
 .card__accomodation {
   background-color: #98bfad;
   border-radius: 20px;
-  width: 30rem;
   margin: 1rem auto;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,9 +48,7 @@ p.card__text {
 .card__restaurant {
   background-color: #ff907c;
   border-radius: 20px;
-  width: 30rem;
   margin: 1rem auto;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -95,4 +95,14 @@ p.card__text {
   justify-content: center;
   transition: all 0.3s ease;
   bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .card__mustDo,
+  .card__meTime,
+  .card__accomodation,
+  .card__restaurant {
+    width: 30rem;
+    min-height: 300px;
+  }
 }

@@ -4,6 +4,7 @@ import Globe from '../Globe/Globe.jsx';
 import FilterCountries from '../FilterCountries/FilterCountries.jsx';
 import FilterCategories from '../FilterCategories/FilterCategories.jsx';
 import CardList from '../CardList/CardList.jsx';
+import Card from '../Card/Card.jsx';
 
 function Home() {
   const [country, setCountry] = useState('CZ');
@@ -93,8 +94,25 @@ function Home() {
           country={country}
           category={category}
           selectedPoint={selectedPoint}
+          setSelectedPoint={setSelectedPoint}
         />
       )}
+
+      {selectedPoint ? (
+        <div className="extra-card-holder">
+          <div className="extra-displayed-card">
+            <Card {...selectedPoint} />
+            <img
+              className="delete-extra-img"
+              src="/images/whiteCross.svg"
+              alt="cross button"
+              onClick={() => {
+                setSelectedPoint(null);
+              }}
+            />
+          </div>
+        </div>
+      ) : null}
       <CardList
         country={country}
         category={category}

@@ -35,8 +35,12 @@ const FilterCategories = ({ category, setCategory }) => {
   const showCategory = categories.find((item) => item.key === category);
 
   return (
-    <form onSubmit={handleSubmit} className="category-data">
-      <div className="info-category" onClick={() => setRollOut(true)}>
+    <form
+      onSubmit={handleSubmit}
+      className="category-data"
+      onMouseLeave={() => setRollOut(false)}
+    >
+      <div className="info-category" onClick={() => setRollOut(!rollOut)}>
         {category && showCategory ? (
           <>
             {showCategory.name}
@@ -44,7 +48,11 @@ const FilterCategories = ({ category, setCategory }) => {
               className="delete-img"
               src="/images/cross.svg"
               alt="cross button"
-              onClick={() => setCategory(null)}
+              onClick={(e) => {
+                setCategory(null);
+                setRollOut(!rollOut);
+                e.stopPropagation();
+              }}
             />
           </>
         ) : (
@@ -71,6 +79,24 @@ export default FilterCategories;
 
 /*
 
- {rollOut ? { category } : 'Choose a category'}   
+      {rollOut && (
+        <div className="category-list">
+          {categories.map((item) => (
+            <div
+              className="category-choice"
+              onClick={() => handleSelected(item.key)}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
+      )}
+
+const handleSelected = (category) => {
+    setRollOut(false);
+    setCategory(category);
+  };
+
+  setCategory(null)
 
 */
