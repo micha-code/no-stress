@@ -101,13 +101,14 @@ function Home() {
       {selectedPoint ? (
         <div className="extra-card-holder">
           <div className="extra-displayed-card">
-            <Card {...selectedPoint} />
+            <Card {...selectedPoint} setSelectedPoint={setSelectedPoint} />
             <img
               className="delete-extra-img"
               src="/images/whiteCross.svg"
               alt="cross button"
-              onClick={() => {
+              onClick={(e) => {
                 setSelectedPoint(null);
+                e.preventDefault();
               }}
             />
           </div>

@@ -40,7 +40,7 @@ const FilterCategories = ({ category, setCategory }) => {
       className="category-data"
       onMouseLeave={() => setRollOut(false)}
     >
-      <div className="info-category" onClick={() => setRollOut(!rollOut)}>
+      <div className="info-category" onClick={(e) => setRollOut(!rollOut)}>
         {category && showCategory ? (
           <>
             {showCategory.name}
@@ -50,7 +50,7 @@ const FilterCategories = ({ category, setCategory }) => {
               alt="cross button"
               onClick={(e) => {
                 setCategory(null);
-                setRollOut(!rollOut);
+                setRollOut(false);
                 e.stopPropagation();
               }}
             />

@@ -54,12 +54,6 @@
   }
 }
 
-/*
-position: absolute;
-left: 30%;
-top: 25%;
-*/
-
 button.map-btn {
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -106,9 +100,9 @@ button.map-btn:focus {
   box-shadow: 20px 20px 8px #888888;
   width: 240px;
   min-height: 150px;
-  border-radius: 20%;
   z-index: 2;
   position: relative;
+  border-radius: 20px;
 }
 
 .delete-extra-img {
