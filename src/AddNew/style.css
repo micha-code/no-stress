@@ -99,7 +99,7 @@ select {
   border-radius: 5px;
   background-color: #f0cfcf;
   padding: 20px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 600px;
   min-width: 300px;
 }
@@ -113,6 +113,7 @@ select {
   cursor: pointer;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgb(245, 234, 234);
 }
 
 .submit__btn:hover {

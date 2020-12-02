@@ -2,9 +2,16 @@
   flex: 1 1 50%;
 }
 
-p.card__text {
-  font-size: 14px;
-  padding: 10px;
+.card button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card button:hover {
+  background-color: transparent;
 }
 
 .card__mustDo,
@@ -77,7 +84,12 @@ p.card__text {
 
 .card__name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
+}
+
+.card__text {
+  font-size: 12px;
+  padding: 10px;
 }
 
 .category__web,
@@ -104,5 +116,15 @@ p.card__text {
   .card__restaurant {
     width: 30rem;
     min-height: 300px;
+  }
+
+  p.card__text {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .card__name {
+    font-weight: bold;
+    font-size: 20px;
   }
 }

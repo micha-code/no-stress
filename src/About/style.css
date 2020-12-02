@@ -105,12 +105,11 @@ a {
   text-decoration: none;
 }
 
-button {
+/*button {
   padding: 10px;
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
-}
-
+}*/
 button:hover {
   background-color: #98bfad;
 }
