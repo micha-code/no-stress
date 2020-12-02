@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import {
   Viewer,
   Entity,
@@ -18,7 +18,7 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   Ion.defaultAccessToken =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzJhMjU1YS0zMDY5LTRkN2QtOTMzMS1lY2FkZWYwYTUwYzkiLCJpZCI6Mzc3NTksImlhdCI6MTYwNTU1MjQ0OX0.bT7I-PurpKWvzE-xack9rB9uFLdEVameSvWT6v159WQ';
 
-  const terrainProvider = createWorldTerrain();
+  const terrainProvider = useMemo(() => createWorldTerrain(), []);
 
   const imageryProvider = new ArcGisMapServerImageryProvider({
     url:
