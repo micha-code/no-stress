@@ -32,7 +32,7 @@ const Card = (props) => {
               </a>
             )}
             <a
-              href=""
+              href="#"
               onClick={() => {
                 const map = document.querySelector('#map');
                 window.scrollTo(0, map.offsetTop);
