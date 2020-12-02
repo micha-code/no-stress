@@ -117,14 +117,14 @@
     width: 30rem;
     min-height: 300px;
   }
-}
 
-p.card__text {
-  font-size: 14px;
-  padding: 10px;
-}
+  p.card__text {
+    font-size: 14px;
+    padding: 10px;
+  }
 
-.card__name {
-  font-weight: bold;
-  font-size: 20px;
+  .card__name {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }

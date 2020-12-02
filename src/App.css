@@ -19,13 +19,14 @@
 
 .menu {
   display: block;
-  margin: 1px;
+  margin: 10px;
   border-bottom: 1px solid transparent;
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
   font-size: 14px;
   text-align: right;
+  line-height: 2.5;
 }
 
 .menu a {
@@ -48,7 +49,7 @@ button.hamburger {
   outline: none;
   border: none;
   background-color: white;
-  padding: 0px;
+  padding: 10px;
 }
 
 button.hamburger:hover {
@@ -100,4 +101,3 @@ button.hamburger:hover {
     cursor: pointer;
   }
 }
-

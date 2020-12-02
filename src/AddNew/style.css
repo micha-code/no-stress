@@ -113,6 +113,7 @@ select {
   cursor: pointer;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgb(245, 234, 234);
 }
 
 .submit__btn:hover {
