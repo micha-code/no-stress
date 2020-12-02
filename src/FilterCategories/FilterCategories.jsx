@@ -56,7 +56,7 @@ const FilterCategories = ({ category, setCategory }) => {
             />
           </>
         ) : (
-          'Choose a category'
+          'Select Category'
         )}
       </div>
       {rollOut && (
