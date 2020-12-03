@@ -54,6 +54,11 @@ const FilterCountries = ({ country, setCountry }) => {
           {!editMode && (
             <div className="country-selected" onClick={() => setEditMode(true)}>
               {currentCountry.name || 'none'}
+              <img
+                className="dropdown-img"
+                src="/images/dropDown.svg"
+                alt="drop-down"
+              />
             </div>
           )}
 

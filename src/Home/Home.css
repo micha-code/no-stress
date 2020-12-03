@@ -72,7 +72,7 @@ button.map-btn:focus {
 }
 
 .map-globe-img {
-  width: 60px;
+  width: 45px;
   height: auto;
 }
 
@@ -138,6 +138,9 @@ button.map-btn:focus {
   }
   .button.map-btn {
     margin-top: -5%;
+  }
+  .map-globe-img {
+    width: 60px;
   }
 }
 

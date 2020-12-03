@@ -29,6 +29,9 @@ html {
 
 .country-selected {
   padding-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .country-data {
@@ -54,6 +57,11 @@ html {
   padding: 5px 10px;
 }
 
+.dropdown-img {
+  margin-left: 5%;
+  height: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .country-info {
     border-radius: 9px;
@@ -68,6 +76,9 @@ html {
   .country-holder {
     padding: 2rem;
     min-width: 250px;
+  }
+  .dropdown-img {
+    height: 20px;
   }
 }
 
