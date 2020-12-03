@@ -2,6 +2,7 @@
 .topbar_container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .LogoImg {
@@ -59,7 +60,7 @@ button.hamburger:hover {
 
 @media screen and (min-width: 768px) {
   .LogoImg {
-    width: 150px;
+    width: 200px;
     background-size: contain;
     margin: 10px;
   }
