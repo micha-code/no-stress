@@ -4,6 +4,7 @@
 
 .category-data {
   position: relative;
+  margin-bottom: 5%;
 }
 
 .info-category {
@@ -21,7 +22,6 @@
   font-size: 20px;
   line-height: 24px;
   position: relative;
-  margin-bottom: 10%;
 }
 
 .category-list {

@@ -202,12 +202,14 @@ const About = () => {
             alt="traveller Pavlina"
           />
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-            ipsam perspiciatis harum, tenetur perferendis quod minima, maiores
-            neque aut odio dicta cum nesciunt tempora ipsum nemo explicabo?
-            Laborum deserunt laboriosam corrupti, ea dolor optio nesciunt magni
-            ipsam accusamus debitis quibusdam delectus consectetur odio,
-            eligendi fugit non vel, amet provident modi!
+            Traveling has become my obsession long time ago. Being able to
+            discover new places, people and cultures is something I consider
+            invaluable and each new journey brings along something new I can
+            learn about myself and the world around me. Having studied and lived
+            in four different countries, I am now working in the education and
+            non-profit sector because I believe we can gain a new perspective
+            not just through traveling but also through better understanding of
+            ourselves. In the meantime I am usually planning my next adventure.
           </p>
           <a
             href="https://www.linkedin.com/in/pavlína-müllerová-377106133"
