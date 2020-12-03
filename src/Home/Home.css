@@ -58,7 +58,6 @@ button.map-btn {
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
   margin-left: 80%;
-  margin-top: -5%;
   border: none;
   background: none;
   border-radius: 20%;
@@ -136,6 +135,9 @@ button.map-btn:focus {
   .container {
     font-size: 20px;
     line-height: 24px;
+  }
+  .button.map-btn {
+    margin-top: -5%;
   }
 }
 

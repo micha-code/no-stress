@@ -77,7 +77,6 @@ function Home() {
               className="map-globe-img"
               src="/images/MapBlack.svg"
               alt="map-icon"
-              title="Open/Close Map"
             />
           </button>
         </h3>
