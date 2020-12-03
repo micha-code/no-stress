@@ -10,18 +10,25 @@ html {
 
 .country-info {
   background: rgba(152, 191, 173, 0.35);
-  border-radius: 9px;
+  border-radius: 20px;
   margin-bottom: 5%;
 }
 
 .country-holder {
-  padding: 2rem;
+  cursor: pointer;
+  min-width: 186px;
+  min-height: 36px;
+  padding: 0.5rem;
 }
 
 .country-choice {
   border: 1px solid rgba(152, 191, 173, 0.35);
   box-sizing: border-box;
-  border-radius: 9px;
+  border-radius: 20px;
+}
+
+.country-selected {
+  padding-top: 2%;
 }
 
 .country-data {
@@ -42,8 +49,26 @@ html {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 5px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .country-info {
+    border-radius: 9px;
+  }
+  .country-choice {
+    border-radius: 9px;
+  }
+  .input-countries {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .country-holder {
+    padding: 2rem;
+    min-width: 250px;
+  }
 }
 
 /*
@@ -51,4 +76,22 @@ padding: 2rem;
 background: rgba(152, 191, 173, 0.35);
   padding: 10px;
   border-radius: 10px;
+
+// onMouseLeave={() => setEditMode(false)}
+
+
+/* .input-countries {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.country-holder {
+  width: 186px;
+  min-height: 36px;
+  padding: 1 rem
+
+.country-info {
+  border-radius: 20px;
+}
+
 */
