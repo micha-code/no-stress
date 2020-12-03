@@ -9,6 +9,7 @@ const AddNew = () => {
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(form.current);
+    alert('Thanks for adding a new place');
 
     database
       .collection('Places')
@@ -24,6 +25,7 @@ const AddNew = () => {
       })
       .then(function (docRef) {
         console.log('document with ID', docRef.id);
+        form.current.reset();
       })
       .catch(function (error) {
         console.error(error);
