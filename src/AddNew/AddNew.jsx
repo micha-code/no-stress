@@ -56,7 +56,7 @@ const AddNew = () => {
             alt="Instagram"
           />
         </a>
-        <a href="nostresstravelguide@gmail.com " className="email">
+        <a href="mailto:nostresstravelguide@gmail.com " className="email">
           <img
             src="images/email.svg"
             width="30"

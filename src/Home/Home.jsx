@@ -44,7 +44,7 @@ function Home() {
           />
         </a>
         <a
-          href="nostresstravelguide@gmail.com "
+          href="mailto:nostresstravelguide@gmail.com "
           target="_blank"
           rel="noreferrer"
           className="email"
