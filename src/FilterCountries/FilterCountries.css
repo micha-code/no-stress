@@ -77,8 +77,6 @@ background: rgba(152, 191, 173, 0.35);
   padding: 10px;
   border-radius: 10px;
 
-// onMouseLeave={() => setEditMode(false)}
-
 
 /* .input-countries {
   font-size: 12px;
@@ -93,5 +91,6 @@ background: rgba(152, 191, 173, 0.35);
 .country-info {
   border-radius: 20px;
 }
+
 
 */

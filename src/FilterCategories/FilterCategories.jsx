@@ -97,6 +97,5 @@ const handleSelected = (category) => {
     setCategory(category);
   };
 
-  setCategory(null)
 
 */
