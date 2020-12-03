@@ -209,7 +209,7 @@ const About = () => {
             in four different countries, I am now working in the education and
             non-profit sector because I believe we can gain a new perspective
             not just through traveling but also through better understanding of
-            ourselves. In the meantime I am usually planning my next adventure.
+            ourselves. Meanwhile I am usually planning my next adventure.
           </p>
           <a
             href="https://www.linkedin.com/in/pavlína-müllerová-377106133"

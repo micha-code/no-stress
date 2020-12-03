@@ -44,7 +44,7 @@ const FilterCountries = ({ country, setCountry }) => {
   });
 
   return (
-    <div className="country-info" onMouseLeave={() => setEditMode(false)}>
+    <div className="country-info">
       <form onSubmit={handleSubmit} className="country-data">
         <div className="country-holder">
           {!editMode && (
