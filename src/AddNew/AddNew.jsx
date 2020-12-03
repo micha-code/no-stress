@@ -9,7 +9,7 @@ const AddNew = () => {
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(form.current);
-    alert('Thanks for adding a new place');
+    alert('Thanks for adding a new place!');
 
     database
       .collection('Places')
