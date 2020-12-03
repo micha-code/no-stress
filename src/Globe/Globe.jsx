@@ -20,10 +20,14 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
 
   const terrainProvider = useMemo(() => createWorldTerrain(), []);
 
-  const imageryProvider = new ArcGisMapServerImageryProvider({
-    url:
-      '//services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
-  });
+  const imageryProvider = useMemo(
+    () =>
+      new ArcGisMapServerImageryProvider({
+        url:
+          '//services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer',
+      }),
+    [],
+  );
 
   const viewer = useRef(null);
 
