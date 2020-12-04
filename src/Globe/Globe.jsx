@@ -6,7 +6,7 @@ import {
   Billboard,
   ImageryLayer,
 } from 'resium';
-import { Color, HorizontalOrigin, Ion, VerticalOrigin } from 'cesium';
+import { Color, HorizontalOrigin, Ion, Math, VerticalOrigin } from 'cesium';
 import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
 import { ArcGisMapServerImageryProvider } from 'cesium';
@@ -31,6 +31,23 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
 
   const viewer = useRef(null);
 
+  const flyToInclined = (longitude, latitude, distance, angle) => {
+    const earthRotate = 6.5;
+    const positionCam = Cartesian3.fromDegrees(
+      longitude,
+      latitude - earthRotate,
+      distance * 1000,
+    );
+    viewer.current.cesiumElement.camera.flyTo({
+      destination: positionCam,
+      orientation: {
+        heading: Math.toRadians(0),
+        pitch: Math.toRadians(-angle),
+        roll: Math.toRadians(0),
+      },
+    });
+  };
+
   // change of country
   useEffect(() => {
     if (viewer.current) {
@@ -39,14 +56,12 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
         return country === item.country;
       });
       if (currentCountry) {
-        const position = Cartesian3.fromDegrees(
+        flyToInclined(
           currentCountry.longitude,
           currentCountry.latitude,
-          600000,
+          600.0,
+          35.0,
         );
-
-        console.log(viewer.current);
-        viewer.current.cesiumElement.camera.flyTo({ destination: position });
       }
     }
   }, [country, viewer]);
@@ -75,13 +90,12 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   // change selected point
   useEffect(() => {
     if (selectedPoint) {
-      viewer.current.cesiumElement.camera.flyTo({
-        destination: Cartesian3.fromDegrees(
-          selectedPoint.longitude,
-          selectedPoint.latitude,
-          150000,
-        ),
-      });
+      flyToInclined(
+        selectedPoint.longitude,
+        selectedPoint.latitude,
+        600.0,
+        35.0,
+      );
     }
   }, [viewer, selectedPoint]);
 
