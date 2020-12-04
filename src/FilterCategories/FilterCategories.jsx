@@ -56,8 +56,13 @@ const FilterCategories = ({ category, setCategory }) => {
             />
           </>
         ) : (
-          'Select Category'
+          'Category'
         )}
+        <img
+          className="dropdown-img"
+          src="/images/dropDown.svg"
+          alt="drop-down"
+        />
       </div>
       {rollOut && (
         <div className="category-list">
