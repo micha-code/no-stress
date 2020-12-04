@@ -182,7 +182,7 @@ const About = () => {
             />
           </a>
           <a
-            href="https://github.com/micha-code/"
+            href="https://michaela-portfolio.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
