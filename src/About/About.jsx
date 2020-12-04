@@ -59,7 +59,7 @@ const About = () => {
         travelers on one platform, where they are able to share their
         experiences, write reviews, and encourage other girls and women to have
         the courage to go beyond their everyday life. <br></br>
-        <br></br>This project was created as a part of Czechitas Web Digital
+        <br></br>Our project was created as a part of Czechitas Web Digital
         Academy.{' '}
         <a
           style={{ color: '#ff1493' }}
@@ -70,16 +70,16 @@ const About = () => {
         >
           Czechitas{' '}
         </a>
-        is a non-profit organization consisted of women and men whoall share a
-        common goal to increase diversity in the IT world and to fight for a
-        higher levelof digital proficiency among women, girls and children as
+        is a non-profit organization consisted of women and men who all share a
+        common goal - to increase diversity in the IT world and to fight for a
+        higher level of digital proficiency among women, girls and children as
         well.<br></br>
-        <br></br> This project wouldnot be possible without our awesome, the
+        <br></br> This project would not be possible without our awesome, the
         best, amazing, and just perfect mentors Pavel Kubík and Matěj Šimek.
         Special thanks goes to incredible, fabulous and very insightful Georgyi
         Chernyavsky, who helped us with design. We would like to thank all of
         them for their time, expertise, great sense of humour, and patience.
-        They were rocking! Thank you, guys!{' '}
+        They were rocking! Thank you, guys!
       </p>
 
       <div className="team">
@@ -96,9 +96,10 @@ const About = () => {
             Sleeping in the desert in my tent or just under a rock overhang
             makes me wake up smiling in the morning. I am a free spirit with
             freedom being my most appreciated value. Currently I make my living
-            by helping to implement a human resources rmanagement software in a
-            multinational. In the evenings I study React and JavaScript within
-            Czechitas Digital Academy.
+            by helping to implement a human resources management software in a
+            multinational where I cooperate with colleagues from all over the
+            world. In the evenings I study React and JavaScript within Czechitas
+            Digital Academy.
           </p>
           <a
             href="https://www.linkedin.com/in/ivonaze"
@@ -202,11 +203,11 @@ const About = () => {
             alt="traveller Pavlina"
           />
           <p>
-            Traveling has become my obsession long time ago. Being able to
-            discover new places, people and cultures is something I consider
-            invaluable and each new journey brings along something new I can
-            learn about myself and the world around me. Having studied and lived
-            in four different countries, I am now working in the education and
+            Traveling became my obsession long time ago. Being able to discover
+            new places, people and cultures is something I consider invaluable
+            and each new journey brings along something new I can learn about
+            myself and the world around me. Having studied and lived in four
+            different countries, I am now working in the education and
             non-profit sector because I believe we can gain a new perspective
             not just through traveling but also through better understanding of
             ourselves. Meanwhile I am usually planning my next adventure.
