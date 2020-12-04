@@ -20,9 +20,11 @@ const FilterCountries = ({ country, setCountry }) => {
           className="country-choice"
           key={item.name}
           value={item.country}
-          onClick={() => {
+          onClick={(e) => {
             setEditMode(false);
             setCountry(item.country);
+            e.stopPropagation();
+            e.preventDefault();
           }}
         >
           {item.name}
@@ -71,7 +73,6 @@ const FilterCountries = ({ country, setCountry }) => {
                 // console.log(e.target.value);
                 setUserFilter(e.target.value);
               }}
-              onBlur={() => setEditMode(false)}
             />
           )}
         </div>
@@ -82,3 +83,5 @@ const FilterCountries = ({ country, setCountry }) => {
 };
 
 export default FilterCountries;
+
+//
