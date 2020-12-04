@@ -18,7 +18,7 @@
   margin: 5px;
 }
 
-.menu {
+.menu-mobil {
   display: block;
   margin: 10px;
   border-bottom: 1px solid transparent;
@@ -30,13 +30,17 @@
   line-height: 2.5;
 }
 
-.menu a {
+.menu-mobil a {
   color: black;
 }
 
-.menu a:hover {
+.menu-mobil a:hover {
   background-color: #ffcccc;
   border-radius: 4px;
+}
+
+.menu-ds {
+  display: none;
 }
 
 .LogoMenu {
@@ -70,7 +74,14 @@ button.hamburger:hover {
     margin: 10px;
   }
 
-  .menu {
+  .hamburger {
+    display: none;
+  }
+  .menu-mobil {
+    display: none;
+  }
+
+  .menu-ds {
     display: flex;
     flex-direction: row;
     margin: 10px;
@@ -82,16 +93,16 @@ button.hamburger:hover {
     text-align: center;
   }
 
-  ul.menu {
+  ul.menu-ds {
     padding: 0px;
   }
 
-  .menu a {
+  .menu-ds a {
     color: black;
     padding: 10px;
   }
 
-  .menu a:hover {
+  .menu-ds a:hover {
     background-color: #ffcccc;
   }
 

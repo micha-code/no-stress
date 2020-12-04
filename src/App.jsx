@@ -26,7 +26,7 @@ const App = () => {
             <img className="LogoMenu" src="images/menu.svg" alt="Menu" />
           </button>
           {open && (
-            <ul className="menu">
+            <ul className="menu-mobil">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -38,6 +38,17 @@ const App = () => {
               </li>
             </ul>
           )}
+          <ul className="menu-ds">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/addNew">Add new</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
         </div>
       </nav>
       <main>
