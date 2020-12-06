@@ -11,7 +11,7 @@ import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
 import { ArcGisMapServerImageryProvider } from 'cesium';
 import database from '../Database/Database.js';
-import './Globe.jsx';
+import './Globe.css';
 
 const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   const [billboards, setBillboards] = useState(null);
