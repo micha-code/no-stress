@@ -11,6 +11,7 @@ import { Cartesian3, createWorldTerrain } from 'cesium';
 import { countries } from '../Data/countries.js';
 import { ArcGisMapServerImageryProvider } from 'cesium';
 import database from '../Database/Database.js';
+import './Globe.jsx';
 
 const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   const [billboards, setBillboards] = useState(null);
@@ -154,8 +155,14 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
 
   return (
     <div>
-      <button onClick={handleZoomOut}>-</button>
-      <button onClick={handleZoomIn}>+</button>
+      <div className="btns-zoom">
+        <button className="btn-zoomout" onClick={handleZoomOut}>
+          <img src="images/minus.svg" alt="icon zoom out" />
+        </button>
+        <button className="btn-zoomin" onClick={handleZoomIn}>
+          <img src="images/plus.svg" alt="icon zoom in" />
+        </button>
+      </div>
       <Viewer
         id="map"
         ref={viewer}

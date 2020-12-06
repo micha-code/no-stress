@@ -1,0 +1,11 @@
+.btn-zoomout,
+.btn-zoomin {
+  border: none;
+  background-color: transparent;
+}
+
+.btns-zoom {
+  z-index: 2;
+  position: absolute;
+  padding: 1%;
+}
