@@ -144,29 +144,41 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
       });
   }, [country, category, setSelectedPoint]);
 
+  const handleZoomIn = () => {
+    viewer.current.cesiumElement.camera.zoomIn();
+  };
+
+  const handleZoomOut = () => {
+    viewer.current.cesiumElement.camera.zoomOut();
+  };
+
   return (
-    <Viewer
-      id="map"
-      ref={viewer}
-      Scene
-      backgroundColor={Color.PINK}
-      terrainProvider={terrainProvider}
-      timeline={false}
-      fullscreenButton={false}
-      baseLayerPicker={false}
-      homeButton={true}
-      creditContainer={null}
-      geocoder={false}
-      animation={false}
-      selectionIndicator={false}
-      vrButton={false}
-      infoBox={false}
-    >
-      <ImageryLayer imageryProvider={imageryProvider} />
-      <Entity>
-        <BillboardCollection>{billboards}</BillboardCollection>
-      </Entity>
-    </Viewer>
+    <div>
+      <button onClick={handleZoomOut}>-</button>
+      <button onClick={handleZoomIn}>+</button>
+      <Viewer
+        id="map"
+        ref={viewer}
+        Scene
+        backgroundColor={Color.PINK}
+        terrainProvider={terrainProvider}
+        timeline={false}
+        fullscreenButton={false}
+        baseLayerPicker={false}
+        homeButton={true}
+        creditContainer={null}
+        geocoder={false}
+        animation={false}
+        selectionIndicator={false}
+        vrButton={false}
+        infoBox={false}
+      >
+        <ImageryLayer imageryProvider={imageryProvider} />
+        <Entity>
+          <BillboardCollection>{billboards}</BillboardCollection>
+        </Entity>
+      </Viewer>
+    </div>
   );
 };
 
@@ -174,4 +186,20 @@ export default Globe;
 
 /*
 .filter((item) => item.country === country)
-*/
+
+
+ 
+  const intervalZoomIn = setInterval(() => {
+    handleZoomIn();
+  }, 300);
+  
+
+  function down() {
+    setInterval(handleZoomIn, 300);
+  }
+  function up() {
+    clearInterval(handleZoomIn);
+  }
+
+  onMouseDown={down()} onMouseUp={up()}
+  */

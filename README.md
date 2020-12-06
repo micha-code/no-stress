@@ -2,9 +2,9 @@ Are you an adventurous soul, who loves traveling from the deep bottom of your he
 
 This project was created as a part of Czechitas Web Digital Academy. Czechitas is a non-profit organization consisted of women and men whoall share a common goal to increase diversity in the IT world and to fight for a higher levelof digital proficiency among women, girls and children as well.
 
-It was created by Michaela Davidova, Pavlina Mullerova and Ivona Zelinkova, with generous help from amazing mentors Pavel Kubik and Matej Simek. 
+It was created by Michaela Davidova, Pavlina Mullerova and Ivona Zelinkova, with generous help from amazing mentors Pavel Kubik and Matej Simek.
 
-Let us know, if you find some bugs or suggestions for improvement. 
+Let us know, if you find some bugs or suggestions for improvement.
 
 We hope you will enjoy it!
 
@@ -24,6 +24,6 @@ https://console.firebase.google.com/project/no-stress-715c5/firestore/data~2FPla
 
 Pokud se nesmazou, budou zaznamy duplikovane
 
+pri zmene databaze je potreba pred spustenim node import.js zmenit i jeji nastaveni v const firebaseConfig
+
 -->
-
-
