@@ -104,7 +104,7 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
   useEffect(() => {
     database
       .collection('Places')
-      .where('country', '==', country)
+      //.where('country', '==', country)
       .get()
       .then((querySnapshot) => {
         const places = [];
@@ -112,12 +112,12 @@ const Globe = ({ country, selectedPoint, category, setSelectedPoint }) => {
           places.push(doc.data());
         });
         const billboardList = places
-          .filter((item) => {
+          /*  .filter((item) => {
             if (!country) {
               return true;
             }
             return item.country === country;
-          })
+          }) */
           .filter((item) => {
             if (!category) {
               return true;
